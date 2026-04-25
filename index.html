@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sebouh &amp; Ranim &ndash; Wedding Invitation</title>
+
+  <!-- Link preview -->
+  <meta property="og:title" content="Sebouh & Ranim – Wedding Invitation" />
+  <meta property="og:description" content="You're invited to celebrate the wedding of Sebouh & Ranim on 1 August 2026 in Vienna, Austria. RSVP and find all the details here!" />
+  <meta property="og:image" content="images/home.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="description" content="You're invited to celebrate the wedding of Sebouh & Ranim on 1 August 2026 in Vienna, Austria." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#6aaf72;
+      --primary-dark:#4d8f56;
+      --primary-soft:#e6f5e3;
+      --accent:#b9df9f;
+      --text:#2d4631;
+      --muted:#6d876f;
+      --white:#ffffff;
+      --sand:#fff3d9;
+      --gold:#d4a843;
+      --gold-soft:#faf1d6;
+      --blush:#f8e8e0;
+      --shadow:0 14px 40px rgba(120,184,127,.12);
+      --container:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      overflow-x:hidden;
+      font-family:'Open Sans',sans-serif;
+      color:var(--text);
+      line-height:1.7;
+      background:linear-gradient(180deg, #fdfefb 0%, #f4faf0 40%, #faf8f2 100%);
+      position:relative;
+    }
+
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    .container{
+      width:min(var(--container), calc(100% - 40px));
+      margin:0 auto;
+      position:relative;
+      z-index:2;
+    }
+
+    .navbar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:100;
+      background:rgba(97,152,103,.18);
+      transition:.4s ease;
+      backdrop-filter:blur(10px);
+    }
+
+    .navbar.scrolled{
+      background:rgba(72,124,78,.92);
+      box-shadow:0 4px 24px rgba(0,0,0,.12);
+    }
+
+    .nav-wrap{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      font-family:'Sacramento',cursive;
+      font-size:42px;
+      color:var(--white);
+      white-space:nowrap;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:rgba(255,255,255,.96);
+    }
+
+    .nav-links a:hover{color:var(--sand)}
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      color:var(--white);
+      background:
+        linear-gradient(160deg, rgba(0,0,0,.30), rgba(0,0,0,.18) 50%, rgba(45,70,49,.28)),
+        url('images/home.jpg') center/cover no-repeat;
+      position:relative;
+      text-align:center;
+      padding:0 20px 12vh;
+      z-index:2;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.12), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(212,168,67,.06), transparent 35%);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      padding:40px 20px;
+      max-width:900px;
+    }
+
+    .hero .sub{
+      font-family:'Sacramento',cursive;
+      font-size:clamp(3rem,7vw,6rem);
+      margin-bottom:10px;
+      text-shadow:0 8px 24px rgba(0,0,0,.18);
+    }
+
+    .hero h1{
+      margin:0;
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2.2rem,5vw,3.5rem);
+      letter-spacing:2px;
+      text-transform:uppercase;
+      text-shadow:0 8px 24px rgba(0,0,0,.18);
+    }
+
+    .hero .lead{
+      margin-top:16px;
+      font-size:1rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      opacity:.92;
+    }
+
+    .save-date{
+      margin-top:24px;
+      display:inline-block;
+      font-weight:600;
+      letter-spacing:2px;
+      font-size:.85rem;
+      padding:12px 28px;
+      border-radius:999px;
+      background:linear-gradient(135deg, rgba(255,255,255,.18), rgba(212,168,67,.14));
+      backdrop-filter:blur(6px);
+      border:1px solid rgba(255,255,255,.22);
+      transition:background .3s ease;
+    }
+    .save-date:hover{ background:rgba(255,255,255,.24); }
+
+    .countdown-strip{
+      position:relative;
+      z-index:3;
+      margin-top:-60px;
+      padding:0 20px 40px;
+      text-align:center;
+    }
+
+    .countdown{
+      display:inline-grid;
+      grid-template-columns:repeat(4, 120px);
+      gap:18px;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(14px);
+      border-radius:24px;
+      padding:32px 38px;
+      box-shadow:0 12px 40px rgba(0,0,0,.08), 0 2px 8px rgba(80,120,80,.06);
+      border:1px solid rgba(212,168,67,.15);
+    }
+
+    .count-box{
+      background:linear-gradient(135deg, var(--sage-light), rgba(212,168,67,.08));
+      border:1px solid rgba(80,120,80,.12);
+      border-radius:18px;
+      padding:20px 12px;
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .count-box:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 20px rgba(80,120,80,.12);
+    }
+
+    .count-box span{
+      display:block;
+      font-size:2.2rem;
+      font-weight:700;
+      line-height:1.1;
+      color:var(--primary-dark);
+      font-family:'Playfair Display',serif;
+    }
+
+    .count-box small{
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      font-size:.7rem;
+      color:var(--muted);
+      margin-top:4px;
+      display:block;
+    }
+
+    .done{
+      grid-column:1 / -1;
+      font-size:1.2rem;
+      font-weight:700;
+    }
+
+    .section{
+      padding:100px 0;
+      position:relative;
+      z-index:2;
+      background:transparent;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:64px;
+    }
+
+    .section-title .sub{
+      font-family:'Sacramento',cursive;
+      font-size:42px;
+      color:var(--primary);
+      line-height:1;
+      margin-bottom:8px;
+    }
+
+    .section-title h2{
+      margin:0;
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2rem,4vw,3.2rem);
+      color:#223025;
+    }
+
+    .section-title p{
+      max-width:760px;
+      margin:14px auto 0;
+      color:var(--muted);
+    }
+
+    .event-grid,
+    .plan-grid,
+    .stay-grid{
+      display:grid;
+      gap:28px;
+    }
+
+    .event-grid,
+    .stay-grid{
+      grid-template-columns:repeat(3, minmax(0,1fr));
+    }
+
+    .plan-grid{
+      grid-template-columns:repeat(2, minmax(0,1fr));
+    }
+
+    .plan-grid.triple{
+      grid-template-columns:repeat(3, minmax(0,1fr));
+    }
+
+    .event-card,
+    .plan-card,
+    .stay-card{
+      background:rgba(255,255,255,.97);
+      box-shadow:0 8px 32px rgba(80,120,80,.08), 0 2px 8px rgba(0,0,0,.04);
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid rgba(120,184,127,.10);
+      transition:transform .32s cubic-bezier(.34,1.56,.64,1), box-shadow .32s ease;
+      position:relative;
+      z-index:2;
+    }
+
+    .event-card:hover,
+    .plan-card:hover,
+    .stay-card:hover{
+      transform:translateY(-8px) scale(1.01);
+      box-shadow:0 22px 48px rgba(80,120,80,.14), 0 4px 12px rgba(0,0,0,.06);
+    }
+
+    .event-card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .event-content,
+    .plan-content,
+    .stay-content{
+      padding:28px;
+    }
+
+    .event-content h3,
+    .plan-content h3,
+    .stay-content h3{
+      margin:0 0 10px;
+      font-family:'Playfair Display',serif;
+      font-size:1.7rem;
+      color:#223025;
+    }
+
+    .event-meta,
+    .plan-time{
+      color:var(--primary-dark);
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .badge{
+      display:inline-block;
+      margin-bottom:14px;
+      padding:7px 16px;
+      border-radius:999px;
+      background:linear-gradient(135deg, var(--primary-soft), var(--gold-soft));
+      color:var(--primary-dark);
+      font-size:.85rem;
+      font-weight:700;
+      letter-spacing:.5px;
+    }
+
+    .event-content p,
+    .plan-content p,
+    .stay-content p,
+    .info-list li{
+      color:var(--muted);
+    }
+
+    .plan-card{
+      position:relative;
+    }
+
+    .plan-card::after{
+      content:'';
+      position:absolute;
+      inset:auto 0 0 0;
+      height:4px;
+      background:linear-gradient(90deg, var(--primary), var(--gold), var(--accent));
+    }
+
+    .plan-photo{
+      width:100%;
+      height:120px;
+      object-fit:cover;
+      object-position:top;
+      border-radius:12px;
+      margin-top:14px;
+      cursor:pointer;
+      transition:transform .25s ease, box-shadow .25s ease;
+      border:1px solid rgba(80,120,80,.1);
+    }
+    .plan-photo:hover{
+      transform:scale(1.03);
+      box-shadow:0 8px 24px rgba(0,0,0,.12);
+    }
+
+    .lightbox{
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      background:rgba(0,0,0,.85);
+      align-items:center;
+      justify-content:center;
+      cursor:zoom-out;
+    }
+    .lightbox.active{ display:flex; }
+    .lightbox img{
+      max-width:92vw;
+      max-height:90vh;
+      border-radius:12px;
+      box-shadow:0 20px 60px rgba(0,0,0,.4);
+    }
+    .lightbox-close{
+      position:absolute;
+      top:20px;
+      right:24px;
+      font-size:2rem;
+      color:#fff;
+      cursor:pointer;
+      background:none;
+      border:none;
+      line-height:1;
+    }
+
+    .plan-icon{
+      width:56px;
+      height:56px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:var(--primary-soft);
+      color:var(--primary-dark);
+      font-size:1.4rem;
+      margin-bottom:16px;
+    }
+
+    .info-list{
+      list-style:none;
+      padding:0;
+      margin:16px 0 0;
+      display:grid;
+      gap:12px;
+    }
+
+    .info-list li{
+      padding:12px 16px;
+      background:linear-gradient(135deg, #f9fff6, #faf8f2);
+      border-radius:12px;
+      border:1px solid #dfeeda;
+    }
+
+    /* --- Fused Schedule Cards --- */
+    .schedule-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:32px;
+    }
+
+    .schedule-card{
+      background:rgba(255,255,255,.97);
+      box-shadow:0 8px 32px rgba(80,120,80,.08), 0 2px 8px rgba(0,0,0,.04);
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(120,184,127,.10);
+      transition:transform .32s cubic-bezier(.34,1.56,.64,1), box-shadow .32s ease;
+      position:relative;
+      z-index:2;
+    }
+
+    .schedule-card:hover{
+      transform:translateY(-8px) scale(1.01);
+      box-shadow:0 22px 48px rgba(80,120,80,.14), 0 4px 12px rgba(0,0,0,.06);
+    }
+
+    .schedule-card .card-img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .schedule-card .card-body{
+      padding:30px 28px;
+      position:relative;
+    }
+
+    .schedule-card .card-body::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:28px;
+      right:28px;
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(120,184,127,.18), transparent);
+    }
+
+    .schedule-card .time-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg, var(--primary-soft), var(--gold-soft));
+      color:var(--primary-dark);
+      font-weight:700;
+      font-size:.9rem;
+      margin-bottom:14px;
+    }
+
+    .schedule-card .time-badge .icon{
+      font-size:1.1rem;
+    }
+
+    .schedule-card h3{
+      margin:0 0 8px;
+      font-family:'Playfair Display',serif;
+      font-size:1.8rem;
+      color:#223025;
+    }
+
+    .schedule-card .card-body > p{
+      color:var(--muted);
+      margin:0 0 16px;
+      line-height:1.6;
+    }
+
+    .schedule-card .detail-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
+    }
+
+    .schedule-card .detail-list li{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 16px;
+      background:linear-gradient(135deg, #f9fff6, #faf8f2);
+      border-radius:12px;
+      border:1px solid #dfeeda;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .schedule-card .detail-list li .li-icon{
+      flex-shrink:0;
+      font-size:1.1rem;
+    }
+
+    .schedule-card::after{
+      content:'';
+      position:absolute;
+      inset:auto 0 0 0;
+      height:4px;
+      background:linear-gradient(90deg, var(--primary), var(--gold), var(--accent));
+    }
+
+    /* --- RSVP Section --- */
+    .rsvp-section{
+      padding:100px 0 80px;
+      position:relative;
+      z-index:2;
+    }
+
+    .rsvp-card{
+      max-width:820px;
+      margin:0 auto;
+      background:rgba(255,255,255,.97);
+      box-shadow:0 12px 40px rgba(80,120,80,.10), 0 2px 8px rgba(0,0,0,.04);
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(120,184,127,.10);
+      position:relative;
+    }
+
+    .rsvp-card::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:6px;
+      background:linear-gradient(90deg, var(--primary), var(--gold), var(--accent), var(--primary));
+    }
+
+    .rsvp-header{
+      text-align:center;
+      padding:40px 30px 24px;
+    }
+
+    .rsvp-header .rsvp-icon{
+      font-size:2.4rem;
+      margin-bottom:10px;
+    }
+
+    .rsvp-header h3{
+      margin:0 0 8px;
+      font-family:'Playfair Display',serif;
+      font-size:2rem;
+      color:#223025;
+    }
+
+    .rsvp-header p{
+      color:var(--muted);
+      max-width:480px;
+      margin:0 auto;
+      line-height:1.6;
+    }
+
+    .rsvp-form{
+      padding:0 36px 40px;
+    }
+
+    .rsvp-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+
+    .rsvp-field{
+      display:flex;
+      flex-direction:column;
+      gap:7px;
+    }
+
+    .rsvp-field.full{
+      grid-column:1 / -1;
+    }
+
+    .rsvp-field label{
+      font-weight:700;
+      color:var(--primary-dark);
+      font-size:.88rem;
+      letter-spacing:.3px;
+    }
+
+    .rsvp-field input,
+    .rsvp-field select,
+    .rsvp-field textarea{
+      width:100%;
+      border:1.5px solid rgba(120,184,127,.18);
+      background:#fcfdfb;
+      border-radius:14px;
+      padding:13px 16px;
+      font-size:.95rem;
+      font-family:'Open Sans',sans-serif;
+      color:var(--text);
+      outline:none;
+      transition:border-color .25s ease, box-shadow .25s ease;
+    }
+
+    .rsvp-field input:focus,
+    .rsvp-field select:focus,
+    .rsvp-field textarea:focus{
+      border-color:var(--primary);
+      box-shadow:0 0 0 4px rgba(106,175,114,.12);
+    }
+
+    .rsvp-field textarea{
+      resize:vertical;
+      min-height:110px;
+    }
+
+    .rsvp-submit-wrap{
+      text-align:center;
+      margin-top:28px;
+    }
+
+    .rsvp-btn{
+      border:none;
+      border-radius:999px;
+      padding:15px 44px;
+      font-size:1rem;
+      font-weight:700;
+      letter-spacing:.5px;
+      color:var(--white);
+      background:linear-gradient(135deg, var(--primary), var(--primary-dark));
+      cursor:pointer;
+      box-shadow:0 10px 28px rgba(80,120,80,.18);
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+
+    .rsvp-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 16px 36px rgba(80,120,80,.24);
+    }
+
+    .rsvp-note{
+      text-align:center;
+      margin-top:18px;
+      color:var(--muted);
+      font-size:.82rem;
+    }
+
+    .rsvp-success{
+      text-align:center;
+      padding:48px 24px;
+      animation:fadeUp .5s ease;
+    }
+
+    .rsvp-success .success-icon{
+      font-size:3.5rem;
+      margin-bottom:16px;
+      display:block;
+    }
+
+    .rsvp-success h3{
+      font-family:'Playfair Display',serif;
+      font-size:1.6rem;
+      color:var(--primary-dark);
+      margin:0 0 10px;
+    }
+
+    .rsvp-success p{
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.6;
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(20px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    /* --- Gallery --- */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:16px;
+    }
+
+    .gallery-item{
+      position:relative;
+      border-radius:16px;
+      overflow:hidden;
+      cursor:pointer;
+      aspect-ratio:1;
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .45s cubic-bezier(.34,1.56,.64,1), filter .3s ease;
+    }
+
+    .gallery-item:hover img{
+      transform:scale(1.06);
+      filter:brightness(1.05);
+    }
+
+    .gallery-item::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, transparent 50%, rgba(45,70,49,.25));
+      opacity:0;
+      transition:opacity .3s ease;
+      pointer-events:none;
+    }
+    .gallery-item:hover::after{opacity:1;}
+
+    .gallery-item.tall{grid-row:span 2;aspect-ratio:auto;}
+
+    .footer{
+      background:linear-gradient(180deg, transparent, rgba(230,245,227,.4));
+      color:var(--muted);
+      text-align:center;
+      padding:40px 20px 50px;
+      font-size:.9rem;
+      position:relative;
+      z-index:2;
+      letter-spacing:.5px;
+    }
+
+    /* flowers start directly after hero */
+    .floral-side{
+      position:absolute;
+      top:calc(100vh - 60px);
+      bottom:0;
+      width:180px;
+      pointer-events:none;
+      z-index:1;
+      opacity:1;
+      filter:drop-shadow(0 6px 18px rgba(80,140,80,.10));
+    }
+
+    .floral-left{left:0}
+
+    .floral-right{
+      right:0;
+      transform:scaleX(-1);
+    }
+
+    .floral-center{
+      position:absolute;
+      top:calc(100vh - 60px);
+      left:0;
+      right:0;
+      bottom:0;
+      pointer-events:none;
+      z-index:1;
+      opacity:1;
+      filter:drop-shadow(0 4px 14px rgba(80,140,80,.08));
+    }
+
+    .floral-side svg,
+    .floral-center svg{
+      width:100%;
+      height:100%;
+      overflow:visible;
+    }
+
+    /* vine growth */
+    .vine-line{
+      transform-origin:center bottom;
+      transform:scaleY(var(--grow, 0.02));
+      transition:transform .15s ease-out;
+      animation:vineSway 6s ease-in-out infinite;
+    }
+
+    .center-line{
+      transform-origin:center bottom;
+      transform:scaleY(var(--center-grow, 0.02));
+      transition:transform .15s ease-out;
+      animation:vineSway 7.5s ease-in-out infinite reverse;
+    }
+
+    /* leaves */
+    .vine-item{
+      transform-box:fill-box;
+      transform-origin:center center;
+      transform:scale(var(--leaf-scale, 0));
+      opacity:var(--leaf-opacity, 0.15);
+      transition:transform .3s cubic-bezier(.34,1.56,.64,1), opacity .3s ease-out;
+      animation:leafSway 4s ease-in-out infinite;
+    }
+    .vine-item:nth-of-type(odd){ animation-duration:4.6s; animation-delay:.3s; }
+    .vine-item:nth-of-type(3n){ animation-duration:5.2s; animation-delay:.6s; }
+
+    /* side blooms */
+    .bloom{
+      transform-box:fill-box;
+      transform-origin:center center;
+      transform:scale(var(--leaf-scale, 0));
+      opacity:var(--leaf-opacity, 0.15);
+      transition:transform .35s cubic-bezier(.34,1.56,.64,1), opacity .35s ease-out;
+      animation:bloomFloat 5s ease-in-out infinite, bloomGlow 3s ease-in-out infinite;
+    }
+    .bloom:nth-of-type(2n){ animation-delay:.4s; animation-duration:5.8s,3.4s; }
+    .bloom:nth-of-type(3n){ animation-delay:.7s; animation-duration:6.2s,2.8s; }
+
+    /* center leaves */
+    .center-item{
+      transform-box:fill-box;
+      transform-origin:center center;
+      transform:scale(var(--center-scale, 0));
+      opacity:var(--center-opacity, 0.12);
+      transition:transform .35s cubic-bezier(.34,1.56,.64,1), opacity .35s ease-out;
+      animation:leafSway 5s ease-in-out infinite;
+    }
+    .center-item:nth-of-type(odd){ animation-duration:5.6s; animation-delay:.2s; }
+    .center-item:nth-of-type(3n){ animation-duration:6.4s; animation-delay:.5s; }
+
+    /* center blooms */
+    .center-bloom{
+      transform-box:fill-box;
+      transform-origin:center center;
+      transform:scale(var(--center-scale, 0));
+      opacity:var(--center-opacity, 0.12);
+      transition:transform .4s cubic-bezier(.34,1.56,.64,1), opacity .4s ease-out;
+      animation:bloomFloat 6s ease-in-out infinite, bloomGlow 4s ease-in-out infinite;
+    }
+    .center-bloom:nth-of-type(2n){ animation-delay:.5s; animation-duration:6.8s,4.4s; }
+    .center-bloom:nth-of-type(3n){ animation-delay:1s; animation-duration:7.2s,3.6s; }
+
+    /* keyframes */
+    @keyframes vineSway{
+      0%,100%{ transform:scaleY(var(--grow, 0.02)) rotate(0deg); }
+      25%{ transform:scaleY(var(--grow, 0.02)) rotate(.4deg); }
+      75%{ transform:scaleY(var(--grow, 0.02)) rotate(-.4deg); }
+    }
+
+    @keyframes leafSway{
+      0%,100%{ transform:scale(var(--leaf-scale, 0)) rotate(0deg) translateY(0px); }
+      33%{ transform:scale(var(--leaf-scale, 0)) rotate(2deg) translateY(-1px); }
+      66%{ transform:scale(var(--leaf-scale, 0)) rotate(-1.5deg) translateY(1px); }
+    }
+
+    @keyframes bloomFloat{
+      0%,100%{ transform:scale(var(--leaf-scale, 0)) translateY(0px) rotate(0deg); }
+      50%{ transform:scale(var(--leaf-scale, 0)) translateY(-4px) rotate(1.5deg); }
+    }
+
+    @keyframes bloomGlow{
+      0%,100%{ filter:drop-shadow(0 0 0 rgba(234,210,122,0)); }
+      50%{ filter:drop-shadow(0 0 10px rgba(234,210,122,.35)); }
+    }
+
+    /* floating petals layer */
+    .falling-petals{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
+      z-index:99;
+      overflow:hidden;
+    }
+    .petal{
+      position:absolute;
+      top:-40px;
+      width:12px;
+      height:12px;
+      background:radial-gradient(ellipse at 30% 30%, #fff8f0, #f5ddd0 60%, #e8c4b4);
+      border-radius:50% 0 50% 50%;
+      opacity:0;
+      animation:petalFall linear infinite;
+    }
+    .petal:nth-child(1){ left:8%;  animation-duration:8s;  animation-delay:0s;   width:10px;height:10px; }
+    .petal:nth-child(2){ left:22%; animation-duration:10s; animation-delay:1.5s; width:14px;height:14px; }
+    .petal:nth-child(3){ left:38%; animation-duration:9s;  animation-delay:3s;   width:11px;height:11px; }
+    .petal:nth-child(4){ left:55%; animation-duration:11s; animation-delay:.5s;  width:13px;height:13px; }
+    .petal:nth-child(5){ left:70%; animation-duration:8.5s;animation-delay:2s;   width:9px; height:9px;  }
+    .petal:nth-child(6){ left:85%; animation-duration:10s; animation-delay:4s;   width:12px;height:12px; }
+    .petal:nth-child(7){ left:15%; animation-duration:12s; animation-delay:5.5s; width:10px;height:10px; }
+    .petal:nth-child(8){ left:48%; animation-duration:9.5s;animation-delay:6s;   width:11px;height:11px; }
+    .petal:nth-child(9){ left:62%; animation-duration:10.5s;animation-delay:2.5s;width:8px; height:8px;  }
+    .petal:nth-child(10){left:92%; animation-duration:8.8s;animation-delay:7s;   width:13px;height:13px; }
+
+    @keyframes petalFall{
+      0%{   transform:translateY(0) rotate(0deg) translateX(0);     opacity:0; }
+      10%{  opacity:.55; }
+      90%{  opacity:.4; }
+      100%{ transform:translateY(105vh) rotate(360deg) translateX(80px); opacity:0; }
+    }
+
+    @media (max-width:992px){
+      .event-grid,
+      .plan-grid,
+      .stay-grid,
+      .plan-grid.triple{
+        grid-template-columns:1fr 1fr;
+      }
+      .schedule-grid{grid-template-columns:1fr 1fr;}
+      .floral-side{width:120px}
+      .falling-petals .petal{width:8px;height:8px}
+    }
+
+    @media (max-width:768px){
+      .navbar{background:rgba(79,126,79,.94)}
+
+      .nav-wrap{
+        flex-direction:column;
+        justify-content:center;
+        padding:14px 0;
+      }
+
+      .brand{font-size:36px}
+
+      .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px 16px;
+        font-size:12px;
+      }
+
+      .countdown{grid-template-columns:repeat(4, 1fr);padding:26px 20px;}
+      .countdown-strip{margin-top:-50px;}
+
+      .event-grid,
+      .plan-grid,
+      .stay-grid,
+      .plan-grid.triple{
+        grid-template-columns:1fr;
+      }
+      .schedule-grid{grid-template-columns:1fr;}
+      .schedule-card .card-img{height:220px;}
+      .event-card img{height:200px;}
+
+      .section{padding:72px 0}
+      .rsvp-section{padding:72px 0 56px;}
+      .floral-side{width:80px}
+
+      .section-title .sub{font-size:34px;}
+
+      .rsvp-form{padding:0 22px 30px;}
+      .rsvp-row{grid-template-columns:1fr;}
+      .rsvp-btn{width:100%;}
+
+      .hero .lead{letter-spacing:1px;font-size:.9rem;}
+      .gallery-grid{grid-template-columns:repeat(2, 1fr);gap:12px;}
+      .gallery-item.tall{grid-row:span 1;aspect-ratio:1;}
+    }
+
+    @media (max-width:560px){
+      .container{width:min(var(--container), calc(100% - 24px))}
+      .countdown{grid-template-columns:repeat(2, 1fr);gap:12px;padding:22px 20px;}
+      .countdown-strip{margin-top:-40px;}
+      .count-box{padding:14px 8px}
+      .count-box span{font-size:1.6rem}
+
+      .plan-content,
+      .stay-content,
+      .event-content{
+        padding:20px;
+      }
+
+      .section{padding:56px 0}
+      .rsvp-section{padding:56px 0 44px;}
+      .section-title .sub{font-size:28px;}
+      .event-card img{height:180px;}
+      .brand{font-size:30px;}
+
+      .schedule-card .card-body{padding:22px 20px;}
+      .floral-side{width:56px}
+      .floral-center{display:none;}
+      .falling-petals{display:none;}
+      .gallery-grid{gap:10px;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- falling petals -->
+<div class="falling-petals" aria-hidden="true">
+  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div>
+</div>
+
+<div class="floral-side floral-left" aria-hidden="true">
+  <svg viewBox="0 0 220 2400" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="bloomGradientSideLeft" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fffefb"/>
+        <stop offset="100%" stop-color="#e8f6e3"/>
+      </linearGradient>
+    </defs>
+
+    <path class="vine-line" d="M112 2400 C70 2200,145 2040,100 1830 C62 1660,142 1470,98 1280 C65 1130,126 930,92 760 C64 620,105 420,92 0" fill="none" stroke="#84be85" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- leaves (dense) -->
+    <path class="vine-item" d="M101 2240 C62 2218,50 2172,80 2152 C111 2172,118 2218,101 2240Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M124 2160 C164 2138,176 2092,146 2070 C114 2090,108 2138,124 2160Z" fill="#a8dca4"/>
+    <path class="vine-item" d="M88 2200 C56 2186,48 2154,70 2138 C94 2150,100 2184,88 2200Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M130 2110 C168 2090,178 2054,152 2034 C126 2050,118 2086,130 2110Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M99 2060 C62 2040,50 1998,78 1978 C108 1996,116 2038,99 2060Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M122 1965 C162 1942,174 1898,144 1874 C114 1892,108 1940,122 1965Z" fill="#9fd69c"/>
+    <path class="vine-item" d="M86 2010 C54 1996,46 1964,68 1948 C92 1960,98 1994,86 2010Z" fill="#d8f0d2"/>
+    <path class="vine-item" d="M132 1920 C166 1900,176 1866,152 1846 C128 1862,120 1896,132 1920Z" fill="#aad8a6"/>
+    <path class="vine-item" d="M98 1870 C60 1848,49 1806,77 1784 C107 1802,114 1848,98 1870Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M124 1770 C164 1746,176 1702,146 1678 C114 1698,108 1746,124 1770Z" fill="#b9df9f"/>
+    <path class="vine-item" d="M86 1820 C54 1806,46 1774,68 1758 C92 1770,98 1804,86 1820Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M130 1720 C164 1702,174 1668,150 1650 C126 1664,118 1698,130 1720Z" fill="#d2eecb"/>
+    <path class="vine-item" d="M98 1660 C60 1640,50 1602,78 1582 C107 1600,114 1640,98 1660Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M122 1560 C160 1538,172 1496,144 1472 C114 1490,108 1536,122 1560Z" fill="#a8dca4"/>
+    <path class="vine-item" d="M85 1610 C55 1596,47 1566,68 1550 C90 1562,96 1594,85 1610Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M128 1510 C162 1492,172 1460,148 1442 C124 1456,116 1488,128 1510Z" fill="#d8f0d2"/>
+    <path class="vine-item" d="M99 1460 C64 1442,54 1404,80 1386 C109 1402,115 1442,99 1460Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M123 1360 C160 1340,172 1300,145 1278 C116 1294,109 1338,123 1360Z" fill="#9fd69c"/>
+    <path class="vine-item" d="M86 1410 C56 1396,48 1366,70 1350 C92 1362,98 1394,86 1410Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M128 1310 C160 1294,170 1262,148 1244 C124 1258,116 1290,128 1310Z" fill="#aad8a6"/>
+    <path class="vine-item" d="M100 1260 C66 1244,56 1210,80 1190 C108 1204,116 1244,100 1260Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M122 1150 C158 1128,170 1090,144 1068 C115 1084,108 1128,122 1150Z" fill="#a8dca4"/>
+    <path class="vine-item" d="M85 1200 C56 1186,48 1158,68 1142 C90 1154,96 1184,85 1200Z" fill="#d2eecb"/>
+    <path class="vine-item" d="M126 1100 C158 1084,168 1054,144 1036 C122 1050,114 1080,126 1100Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M98 1030 C66 1014,56 982,80 966 C106 980,112 1012,98 1030Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M118 915 C154 894,166 858,141 836 C114 852,107 894,118 915Z" fill="#b9df9f"/>
+    <path class="vine-item" d="M86 970 C58 956,50 930,70 916 C92 928,96 954,86 970Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M124 870 C154 854,164 826,142 810 C120 822,112 852,124 870Z" fill="#d8f0d2"/>
+    <path class="vine-item" d="M98 790 C68 776,60 748,80 734 C104 746,110 774,98 790Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M116 640 C150 622,160 588,138 568 C112 582,106 618,116 640Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M88 720 C60 708,52 682,72 668 C94 678,98 706,88 720Z" fill="#aad8a6"/>
+    <path class="vine-item" d="M120 580 C148 566,158 540,138 526 C116 536,110 564,120 580Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M100 500 C70 484,62 454,82 438 C106 452,112 484,100 500Z" fill="#b9df9f"/>
+    <path class="vine-item" d="M114 335 C146 318,156 286,134 266 C110 280,104 314,114 335Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M90 420 C64 408,56 382,76 368 C96 378,100 406,90 420Z" fill="#d2eecb"/>
+    <path class="vine-item" d="M116 270 C142 258,150 234,132 220 C112 230,106 256,116 270Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M99 180 C70 166,62 140,82 126 C105 138,111 166,99 180Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M110 110 C136 100,144 78,126 66 C108 74,102 98,110 110Z" fill="#b5dfac"/>
+
+    <!-- more flowers -->
+    <g class="bloom">
+      <ellipse cx="108" cy="2100" rx="9" ry="16" fill="#ffffff"/>
+      <ellipse cx="122" cy="2100" rx="9" ry="16" fill="#fffefb" transform="rotate(72 122 2100)"/>
+      <ellipse cx="94" cy="2100" rx="9" ry="16" fill="#fffefb" transform="rotate(-72 94 2100)"/>
+      <ellipse cx="108" cy="2100" rx="9" ry="16" fill="#ffffff" transform="rotate(144 108 2100)"/>
+      <ellipse cx="108" cy="2100" rx="9" ry="16" fill="#ffffff" transform="rotate(-144 108 2100)"/>
+      <circle cx="108" cy="2100" r="4.8" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="101" cy="1825" rx="8" ry="14" fill="#ffffff"/>
+      <ellipse cx="114" cy="1825" rx="8" ry="14" fill="#fffefb" transform="rotate(72 114 1825)"/>
+      <ellipse cx="88" cy="1825" rx="8" ry="14" fill="#fffefb" transform="rotate(-72 88 1825)"/>
+      <ellipse cx="101" cy="1825" rx="8" ry="14" fill="#ffffff" transform="rotate(144 101 1825)"/>
+      <ellipse cx="101" cy="1825" rx="8" ry="14" fill="#ffffff" transform="rotate(-144 101 1825)"/>
+      <circle cx="101" cy="1825" r="4.3" fill="#ead27a"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="110" cy="1540" rx="8" ry="13" fill="#ffffff"/>
+      <ellipse cx="122" cy="1540" rx="8" ry="13" fill="#fffefb" transform="rotate(72 122 1540)"/>
+      <ellipse cx="98" cy="1540" rx="8" ry="13" fill="#fffefb" transform="rotate(-72 98 1540)"/>
+      <ellipse cx="110" cy="1540" rx="8" ry="13" fill="#ffffff" transform="rotate(144 110 1540)"/>
+      <ellipse cx="110" cy="1540" rx="8" ry="13" fill="#ffffff" transform="rotate(-144 110 1540)"/>
+      <circle cx="110" cy="1540" r="4" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="100" cy="1260" rx="7.5" ry="12.5" fill="#ffffff"/>
+      <ellipse cx="112" cy="1260" rx="7.5" ry="12.5" fill="#fffefb" transform="rotate(72 112 1260)"/>
+      <ellipse cx="88" cy="1260" rx="7.5" ry="12.5" fill="#fffefb" transform="rotate(-72 88 1260)"/>
+      <ellipse cx="100" cy="1260" rx="7.5" ry="12.5" fill="#ffffff" transform="rotate(144 100 1260)"/>
+      <ellipse cx="100" cy="1260" rx="7.5" ry="12.5" fill="#ffffff" transform="rotate(-144 100 1260)"/>
+      <circle cx="100" cy="1260" r="3.8" fill="#ecd17b"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="108" cy="990" rx="7" ry="12" fill="#ffffff"/>
+      <ellipse cx="119" cy="990" rx="7" ry="12" fill="#fffefb" transform="rotate(72 119 990)"/>
+      <ellipse cx="97" cy="990" rx="7" ry="12" fill="#fffefb" transform="rotate(-72 97 990)"/>
+      <ellipse cx="108" cy="990" rx="7" ry="12" fill="#ffffff" transform="rotate(144 108 990)"/>
+      <ellipse cx="108" cy="990" rx="7" ry="12" fill="#ffffff" transform="rotate(-144 108 990)"/>
+      <circle cx="108" cy="990" r="3.6" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="100" cy="710" rx="6.8" ry="11.5" fill="#ffffff"/>
+      <ellipse cx="111" cy="710" rx="6.8" ry="11.5" fill="#fffefb" transform="rotate(72 111 710)"/>
+      <ellipse cx="89" cy="710" rx="6.8" ry="11.5" fill="#fffefb" transform="rotate(-72 89 710)"/>
+      <ellipse cx="100" cy="710" rx="6.8" ry="11.5" fill="#ffffff" transform="rotate(144 100 710)"/>
+      <ellipse cx="100" cy="710" rx="6.8" ry="11.5" fill="#ffffff" transform="rotate(-144 100 710)"/>
+      <circle cx="100" cy="710" r="3.4" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="106" cy="430" rx="6.2" ry="10.5" fill="#ffffff"/>
+      <ellipse cx="116" cy="430" rx="6.2" ry="10.5" fill="#fffefb" transform="rotate(72 116 430)"/>
+      <ellipse cx="96" cy="430" rx="6.2" ry="10.5" fill="#fffefb" transform="rotate(-72 96 430)"/>
+      <ellipse cx="106" cy="430" rx="6.2" ry="10.5" fill="#ffffff" transform="rotate(144 106 430)"/>
+      <ellipse cx="106" cy="430" rx="6.2" ry="10.5" fill="#ffffff" transform="rotate(-144 106 430)"/>
+      <circle cx="106" cy="430" r="3.1" fill="#ead27a"/>
+    </g>
+
+    <!-- pink/coral accent flowers -->
+    <g class="bloom">
+      <ellipse cx="95" cy="2000" rx="7" ry="11" fill="#fce4e0"/>
+      <ellipse cx="106" cy="2000" rx="7" ry="11" fill="#f8d5cf" transform="rotate(72 106 2000)"/>
+      <ellipse cx="84" cy="2000" rx="7" ry="11" fill="#fce4e0" transform="rotate(-72 84 2000)"/>
+      <ellipse cx="95" cy="2000" rx="7" ry="11" fill="#f8d5cf" transform="rotate(144 95 2000)"/>
+      <ellipse cx="95" cy="2000" rx="7" ry="11" fill="#fce4e0" transform="rotate(-144 95 2000)"/>
+      <circle cx="95" cy="2000" r="3.2" fill="#ead27a"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="112" cy="1400" rx="6.5" ry="10" fill="#fce4e0"/>
+      <ellipse cx="122" cy="1400" rx="6.5" ry="10" fill="#f8d5cf" transform="rotate(72 122 1400)"/>
+      <ellipse cx="102" cy="1400" rx="6.5" ry="10" fill="#fce4e0" transform="rotate(-72 102 1400)"/>
+      <ellipse cx="112" cy="1400" rx="6.5" ry="10" fill="#f8d5cf" transform="rotate(144 112 1400)"/>
+      <ellipse cx="112" cy="1400" rx="6.5" ry="10" fill="#fce4e0" transform="rotate(-144 112 1400)"/>
+      <circle cx="112" cy="1400" r="3" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="100" cy="850" rx="5.5" ry="9" fill="#fce4e0"/>
+      <ellipse cx="109" cy="850" rx="5.5" ry="9" fill="#f8d5cf" transform="rotate(72 109 850)"/>
+      <ellipse cx="91" cy="850" rx="5.5" ry="9" fill="#fce4e0" transform="rotate(-72 91 850)"/>
+      <ellipse cx="100" cy="850" rx="5.5" ry="9" fill="#f8d5cf" transform="rotate(144 100 850)"/>
+      <ellipse cx="100" cy="850" rx="5.5" ry="9" fill="#fce4e0" transform="rotate(-144 100 850)"/>
+      <circle cx="100" cy="850" r="2.6" fill="#ebd88f"/>
+    </g>
+
+    <!-- extra small white flowers -->
+    <g class="bloom">
+      <ellipse cx="96" cy="1680" rx="5.5" ry="9" fill="#fff"/>
+      <ellipse cx="105" cy="1680" rx="5.5" ry="9" fill="#fffefb" transform="rotate(72 105 1680)"/>
+      <ellipse cx="87" cy="1680" rx="5.5" ry="9" fill="#fff" transform="rotate(-72 87 1680)"/>
+      <ellipse cx="96" cy="1680" rx="5.5" ry="9" fill="#fffefb" transform="rotate(144 96 1680)"/>
+      <ellipse cx="96" cy="1680" rx="5.5" ry="9" fill="#fff" transform="rotate(-144 96 1680)"/>
+      <circle cx="96" cy="1680" r="2.8" fill="#ebd88f"/>
+    </g>
+    <g class="bloom">
+      <ellipse cx="114" cy="1130" rx="5" ry="8.5" fill="#fff"/>
+      <ellipse cx="123" cy="1130" rx="5" ry="8.5" fill="#fffefb" transform="rotate(72 123 1130)"/>
+      <ellipse cx="105" cy="1130" rx="5" ry="8.5" fill="#fff" transform="rotate(-72 105 1130)"/>
+      <ellipse cx="114" cy="1130" rx="5" ry="8.5" fill="#fffefb" transform="rotate(144 114 1130)"/>
+      <ellipse cx="114" cy="1130" rx="5" ry="8.5" fill="#fff" transform="rotate(-144 114 1130)"/>
+      <circle cx="114" cy="1130" r="2.5" fill="#ead27a"/>
+    </g>
+    <g class="bloom">
+      <ellipse cx="102" cy="560" rx="4.8" ry="8" fill="#fce4e0"/>
+      <ellipse cx="110" cy="560" rx="4.8" ry="8" fill="#f8d5cf" transform="rotate(72 110 560)"/>
+      <ellipse cx="94" cy="560" rx="4.8" ry="8" fill="#fce4e0" transform="rotate(-72 94 560)"/>
+      <ellipse cx="102" cy="560" rx="4.8" ry="8" fill="#f8d5cf" transform="rotate(144 102 560)"/>
+      <ellipse cx="102" cy="560" rx="4.8" ry="8" fill="#fce4e0" transform="rotate(-144 102 560)"/>
+      <circle cx="102" cy="560" r="2.3" fill="#ebd88f"/>
+    </g>
+    <g class="bloom">
+      <ellipse cx="98" cy="280" rx="4.5" ry="7.5" fill="#fff"/>
+      <ellipse cx="106" cy="280" rx="4.5" ry="7.5" fill="#fffefb" transform="rotate(72 106 280)"/>
+      <ellipse cx="90" cy="280" rx="4.5" ry="7.5" fill="#fff" transform="rotate(-72 90 280)"/>
+      <ellipse cx="98" cy="280" rx="4.5" ry="7.5" fill="#fffefb" transform="rotate(144 98 280)"/>
+      <ellipse cx="98" cy="280" rx="4.5" ry="7.5" fill="#fff" transform="rotate(-144 98 280)"/>
+      <circle cx="98" cy="280" r="2.2" fill="#ead27a"/>
+    </g>
+
+    
+    <!-- extra leaves -->
+    <path class="vine-item" d="M95 2290 C67 2276,59 2244,79 2228 C101 2240,107 2276,95 2290Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M128 2050 C158 2036,166 2004,144 1988 C120 2002,116 2036,128 2050Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M84 1890 C45 1868,33 1822,63 1802 C94 1822,101 1868,84 1890Z" fill="#9fd69c"/>
+    <path class="vine-item" d="M130 1790 C170 1768,182 1722,152 1700 C120 1720,114 1768,130 1790Z" fill="#d8f0d2"/>
+    <path class="vine-item" d="M92 1630 C64 1616,56 1584,76 1568 C98 1580,104 1616,92 1630Z" fill="#aad8a6"/>
+    <path class="vine-item" d="M126 1560 C156 1546,164 1514,142 1498 C118 1512,114 1546,126 1560Z" fill="#b9df9f"/>
+    <path class="vine-item" d="M82 1370 C43 1348,31 1302,61 1282 C92 1302,99 1348,82 1370Z" fill="#d2eecb"/>
+    <path class="vine-item" d="M130 1230 C170 1208,182 1162,152 1140 C120 1160,114 1208,130 1230Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M88 1095 C60 1081,52 1049,72 1033 C94 1045,100 1081,88 1095Z" fill="#a8dca4"/>
+    <path class="vine-item" d="M126 1010 C156 996,164 964,142 948 C118 962,114 996,126 1010Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M82 920 C43 898,31 852,61 832 C92 852,99 898,82 920Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M118 810 C158 788,170 742,140 720 C108 740,102 788,118 810Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M92 660 C64 646,56 614,76 598 C98 610,104 646,92 660Z" fill="#9fd69c"/>
+    <path class="vine-item" d="M126 515 C156 501,164 469,142 453 C118 467,114 501,126 515Z" fill="#d8f0d2"/>
+    <path class="vine-item" d="M84 340 C45 318,33 272,63 252 C94 272,101 318,84 340Z" fill="#aad8a6"/>
+    <path class="vine-item" d="M118 230 C158 208,170 162,140 140 C108 160,102 208,118 230Z" fill="#b9df9f"/>
+    <path class="vine-item" d="M94 60 C66 46,58 14,78 -2 C100 10,106 46,94 60Z" fill="#d2eecb"/>
+
+    <!-- extra flowers -->
+
+    <g class="bloom">
+      <ellipse cx="92" cy="2240" rx="7" ry="11" fill="#fce4e0"/>
+      <ellipse cx="103" cy="2240" rx="7" ry="11" fill="#f8d5cf" transform="rotate(72 103 2240)"/>
+      <ellipse cx="81" cy="2240" rx="7" ry="11" fill="#fce4e0" transform="rotate(-72 81 2240)"/>
+      <ellipse cx="92" cy="2240" rx="7" ry="11" fill="#fce4e0" transform="rotate(144 92 2240)"/>
+      <ellipse cx="92" cy="2240" rx="7" ry="11" fill="#fce4e0" transform="rotate(-144 92 2240)"/>
+      <circle cx="92" cy="2240" r="2.8" fill="#ead27a"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="114" cy="1920" rx="6.5" ry="10.5" fill="#fff"/>
+      <ellipse cx="124" cy="1920" rx="6.5" ry="10.5" fill="#fffefb" transform="rotate(72 124 1920)"/>
+      <ellipse cx="104" cy="1920" rx="6.5" ry="10.5" fill="#fff" transform="rotate(-72 104 1920)"/>
+      <ellipse cx="114" cy="1920" rx="6.5" ry="10.5" fill="#fff" transform="rotate(144 114 1920)"/>
+      <ellipse cx="114" cy="1920" rx="6.5" ry="10.5" fill="#fff" transform="rotate(-144 114 1920)"/>
+      <circle cx="114" cy="1920" r="2.8" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="96" cy="1480" rx="6" ry="10" fill="#fce4e0"/>
+      <ellipse cx="105" cy="1480" rx="6" ry="10" fill="#f8d5cf" transform="rotate(72 105 1480)"/>
+      <ellipse cx="87" cy="1480" rx="6" ry="10" fill="#fce4e0" transform="rotate(-72 87 1480)"/>
+      <ellipse cx="96" cy="1480" rx="6" ry="10" fill="#fce4e0" transform="rotate(144 96 1480)"/>
+      <ellipse cx="96" cy="1480" rx="6" ry="10" fill="#fce4e0" transform="rotate(-144 96 1480)"/>
+      <circle cx="96" cy="1480" r="2.8" fill="#ead27a"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="108" cy="640" rx="5.5" ry="9" fill="#fff"/>
+      <ellipse cx="116" cy="640" rx="5.5" ry="9" fill="#fffefb" transform="rotate(72 116 640)"/>
+      <ellipse cx="100" cy="640" rx="5.5" ry="9" fill="#fff" transform="rotate(-72 100 640)"/>
+      <ellipse cx="108" cy="640" rx="5.5" ry="9" fill="#fff" transform="rotate(144 108 640)"/>
+      <ellipse cx="108" cy="640" rx="5.5" ry="9" fill="#fff" transform="rotate(-144 108 640)"/>
+      <circle cx="108" cy="640" r="2.8" fill="#ebd88f"/>
+    </g>
+
+    <!-- filler buds -->
+    <circle class="vine-item" cx="90" cy="2190" r="4" fill="#f5ddd0" opacity=".7"/>
+    <circle class="vine-item" cx="115" cy="1720" r="3.5" fill="#f5ddd0" opacity=".65"/>
+    <circle class="vine-item" cx="88" cy="1110" r="3" fill="#f5ddd0" opacity=".6"/>
+    <circle class="vine-item" cx="110" cy="580" r="2.5" fill="#f5ddd0" opacity=".55"/>
+    <circle class="vine-item" cx="104" cy="2310" r="3.8" fill="#cde8c5" opacity=".65"/>
+    <circle class="vine-item" cx="92" cy="1940" r="3.5" fill="#ecd17b" opacity=".4"/>
+    <circle class="vine-item" cx="118" cy="1510" r="3" fill="#cde8c5" opacity=".6"/>
+    <circle class="vine-item" cx="86" cy="1310" r="3.2" fill="#ecd17b" opacity=".35"/>
+    <circle class="vine-item" cx="112" cy="870" r="2.8" fill="#cde8c5" opacity=".55"/>
+    <circle class="vine-item" cx="94" cy="390" r="2.5" fill="#ecd17b" opacity=".3"/>
+    <circle class="vine-item" cx="108" cy="140" r="2.2" fill="#cde8c5" opacity=".5"/>
+  </svg>
+</div>
+
+<div class="floral-side floral-right" aria-hidden="true">
+  <svg viewBox="0 0 220 2400" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="bloomGradientSideRight" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fffefb"/>
+        <stop offset="100%" stop-color="#e8f6e3"/>
+      </linearGradient>
+    </defs>
+
+    <path class="vine-line" d="M112 2400 C70 2200,145 2040,100 1830 C62 1660,142 1470,98 1280 C65 1130,126 930,92 760 C64 620,105 420,92 0" fill="none" stroke="#84be85" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- leaves (dense) -->
+    <path class="vine-item" d="M101 2240 C62 2218,50 2172,80 2152 C111 2172,118 2218,101 2240Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M124 2160 C164 2138,176 2092,146 2070 C114 2090,108 2138,124 2160Z" fill="#a8dca4"/>
+    <path class="vine-item" d="M88 2200 C56 2186,48 2154,70 2138 C94 2150,100 2184,88 2200Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M130 2110 C168 2090,178 2054,152 2034 C126 2050,118 2086,130 2110Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M99 2060 C62 2040,50 1998,78 1978 C108 1996,116 2038,99 2060Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M122 1965 C162 1942,174 1898,144 1874 C114 1892,108 1940,122 1965Z" fill="#9fd69c"/>
+    <path class="vine-item" d="M86 2010 C54 1996,46 1964,68 1948 C92 1960,98 1994,86 2010Z" fill="#d8f0d2"/>
+    <path class="vine-item" d="M132 1920 C166 1900,176 1866,152 1846 C128 1862,120 1896,132 1920Z" fill="#aad8a6"/>
+    <path class="vine-item" d="M98 1870 C60 1848,49 1806,77 1784 C107 1802,114 1848,98 1870Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M124 1770 C164 1746,176 1702,146 1678 C114 1698,108 1746,124 1770Z" fill="#b9df9f"/>
+    <path class="vine-item" d="M86 1820 C54 1806,46 1774,68 1758 C92 1770,98 1804,86 1820Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M130 1720 C164 1702,174 1668,150 1650 C126 1664,118 1698,130 1720Z" fill="#d2eecb"/>
+    <path class="vine-item" d="M98 1660 C60 1640,50 1602,78 1582 C107 1600,114 1640,98 1660Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M122 1560 C160 1538,172 1496,144 1472 C114 1490,108 1536,122 1560Z" fill="#a8dca4"/>
+    <path class="vine-item" d="M85 1610 C55 1596,47 1566,68 1550 C90 1562,96 1594,85 1610Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M128 1510 C162 1492,172 1460,148 1442 C124 1456,116 1488,128 1510Z" fill="#d8f0d2"/>
+    <path class="vine-item" d="M99 1460 C64 1442,54 1404,80 1386 C109 1402,115 1442,99 1460Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M123 1360 C160 1340,172 1300,145 1278 C116 1294,109 1338,123 1360Z" fill="#9fd69c"/>
+    <path class="vine-item" d="M86 1410 C56 1396,48 1366,70 1350 C92 1362,98 1394,86 1410Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M128 1310 C160 1294,170 1262,148 1244 C124 1258,116 1290,128 1310Z" fill="#aad8a6"/>
+    <path class="vine-item" d="M100 1260 C66 1244,56 1210,80 1190 C108 1204,116 1244,100 1260Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M122 1150 C158 1128,170 1090,144 1068 C115 1084,108 1128,122 1150Z" fill="#a8dca4"/>
+    <path class="vine-item" d="M85 1200 C56 1186,48 1158,68 1142 C90 1154,96 1184,85 1200Z" fill="#d2eecb"/>
+    <path class="vine-item" d="M126 1100 C158 1084,168 1054,144 1036 C122 1050,114 1080,126 1100Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M98 1030 C66 1014,56 982,80 966 C106 980,112 1012,98 1030Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M118 915 C154 894,166 858,141 836 C114 852,107 894,118 915Z" fill="#b9df9f"/>
+    <path class="vine-item" d="M86 970 C58 956,50 930,70 916 C92 928,96 954,86 970Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M124 870 C154 854,164 826,142 810 C120 822,112 852,124 870Z" fill="#d8f0d2"/>
+    <path class="vine-item" d="M98 790 C68 776,60 748,80 734 C104 746,110 774,98 790Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M116 640 C150 622,160 588,138 568 C112 582,106 618,116 640Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M88 720 C60 708,52 682,72 668 C94 678,98 706,88 720Z" fill="#aad8a6"/>
+    <path class="vine-item" d="M120 580 C148 566,158 540,138 526 C116 536,110 564,120 580Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M100 500 C70 484,62 454,82 438 C106 452,112 484,100 500Z" fill="#b9df9f"/>
+    <path class="vine-item" d="M114 335 C146 318,156 286,134 266 C110 280,104 314,114 335Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M90 420 C64 408,56 382,76 368 C96 378,100 406,90 420Z" fill="#d2eecb"/>
+    <path class="vine-item" d="M116 270 C142 258,150 234,132 220 C112 230,106 256,116 270Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M99 180 C70 166,62 140,82 126 C105 138,111 166,99 180Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M110 110 C136 100,144 78,126 66 C108 74,102 98,110 110Z" fill="#b5dfac"/>
+
+    <!-- more flowers -->
+    <g class="bloom">
+      <ellipse cx="108" cy="2100" rx="9" ry="16" fill="#ffffff"/>
+      <ellipse cx="122" cy="2100" rx="9" ry="16" fill="#fffefb" transform="rotate(72 122 2100)"/>
+      <ellipse cx="94" cy="2100" rx="9" ry="16" fill="#fffefb" transform="rotate(-72 94 2100)"/>
+      <ellipse cx="108" cy="2100" rx="9" ry="16" fill="#ffffff" transform="rotate(144 108 2100)"/>
+      <ellipse cx="108" cy="2100" rx="9" ry="16" fill="#ffffff" transform="rotate(-144 108 2100)"/>
+      <circle cx="108" cy="2100" r="4.8" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="101" cy="1825" rx="8" ry="14" fill="#ffffff"/>
+      <ellipse cx="114" cy="1825" rx="8" ry="14" fill="#fffefb" transform="rotate(72 114 1825)"/>
+      <ellipse cx="88" cy="1825" rx="8" ry="14" fill="#fffefb" transform="rotate(-72 88 1825)"/>
+      <ellipse cx="101" cy="1825" rx="8" ry="14" fill="#ffffff" transform="rotate(144 101 1825)"/>
+      <ellipse cx="101" cy="1825" rx="8" ry="14" fill="#ffffff" transform="rotate(-144 101 1825)"/>
+      <circle cx="101" cy="1825" r="4.3" fill="#ead27a"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="110" cy="1540" rx="8" ry="13" fill="#ffffff"/>
+      <ellipse cx="122" cy="1540" rx="8" ry="13" fill="#fffefb" transform="rotate(72 122 1540)"/>
+      <ellipse cx="98" cy="1540" rx="8" ry="13" fill="#fffefb" transform="rotate(-72 98 1540)"/>
+      <ellipse cx="110" cy="1540" rx="8" ry="13" fill="#ffffff" transform="rotate(144 110 1540)"/>
+      <ellipse cx="110" cy="1540" rx="8" ry="13" fill="#ffffff" transform="rotate(-144 110 1540)"/>
+      <circle cx="110" cy="1540" r="4" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="100" cy="1260" rx="7.5" ry="12.5" fill="#ffffff"/>
+      <ellipse cx="112" cy="1260" rx="7.5" ry="12.5" fill="#fffefb" transform="rotate(72 112 1260)"/>
+      <ellipse cx="88" cy="1260" rx="7.5" ry="12.5" fill="#fffefb" transform="rotate(-72 88 1260)"/>
+      <ellipse cx="100" cy="1260" rx="7.5" ry="12.5" fill="#ffffff" transform="rotate(144 100 1260)"/>
+      <ellipse cx="100" cy="1260" rx="7.5" ry="12.5" fill="#ffffff" transform="rotate(-144 100 1260)"/>
+      <circle cx="100" cy="1260" r="3.8" fill="#ecd17b"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="108" cy="990" rx="7" ry="12" fill="#ffffff"/>
+      <ellipse cx="119" cy="990" rx="7" ry="12" fill="#fffefb" transform="rotate(72 119 990)"/>
+      <ellipse cx="97" cy="990" rx="7" ry="12" fill="#fffefb" transform="rotate(-72 97 990)"/>
+      <ellipse cx="108" cy="990" rx="7" ry="12" fill="#ffffff" transform="rotate(144 108 990)"/>
+      <ellipse cx="108" cy="990" rx="7" ry="12" fill="#ffffff" transform="rotate(-144 108 990)"/>
+      <circle cx="108" cy="990" r="3.6" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="100" cy="710" rx="6.8" ry="11.5" fill="#ffffff"/>
+      <ellipse cx="111" cy="710" rx="6.8" ry="11.5" fill="#fffefb" transform="rotate(72 111 710)"/>
+      <ellipse cx="89" cy="710" rx="6.8" ry="11.5" fill="#fffefb" transform="rotate(-72 89 710)"/>
+      <ellipse cx="100" cy="710" rx="6.8" ry="11.5" fill="#ffffff" transform="rotate(144 100 710)"/>
+      <ellipse cx="100" cy="710" rx="6.8" ry="11.5" fill="#ffffff" transform="rotate(-144 100 710)"/>
+      <circle cx="100" cy="710" r="3.4" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="106" cy="430" rx="6.2" ry="10.5" fill="#ffffff"/>
+      <ellipse cx="116" cy="430" rx="6.2" ry="10.5" fill="#fffefb" transform="rotate(72 116 430)"/>
+      <ellipse cx="96" cy="430" rx="6.2" ry="10.5" fill="#fffefb" transform="rotate(-72 96 430)"/>
+      <ellipse cx="106" cy="430" rx="6.2" ry="10.5" fill="#ffffff" transform="rotate(144 106 430)"/>
+      <ellipse cx="106" cy="430" rx="6.2" ry="10.5" fill="#ffffff" transform="rotate(-144 106 430)"/>
+      <circle cx="106" cy="430" r="3.1" fill="#ead27a"/>
+    </g>
+
+    <!-- pink/coral accent flowers -->
+    <g class="bloom">
+      <ellipse cx="95" cy="2000" rx="7" ry="11" fill="#fce4e0"/>
+      <ellipse cx="106" cy="2000" rx="7" ry="11" fill="#f8d5cf" transform="rotate(72 106 2000)"/>
+      <ellipse cx="84" cy="2000" rx="7" ry="11" fill="#fce4e0" transform="rotate(-72 84 2000)"/>
+      <ellipse cx="95" cy="2000" rx="7" ry="11" fill="#f8d5cf" transform="rotate(144 95 2000)"/>
+      <ellipse cx="95" cy="2000" rx="7" ry="11" fill="#fce4e0" transform="rotate(-144 95 2000)"/>
+      <circle cx="95" cy="2000" r="3.2" fill="#ead27a"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="112" cy="1400" rx="6.5" ry="10" fill="#fce4e0"/>
+      <ellipse cx="122" cy="1400" rx="6.5" ry="10" fill="#f8d5cf" transform="rotate(72 122 1400)"/>
+      <ellipse cx="102" cy="1400" rx="6.5" ry="10" fill="#fce4e0" transform="rotate(-72 102 1400)"/>
+      <ellipse cx="112" cy="1400" rx="6.5" ry="10" fill="#f8d5cf" transform="rotate(144 112 1400)"/>
+      <ellipse cx="112" cy="1400" rx="6.5" ry="10" fill="#fce4e0" transform="rotate(-144 112 1400)"/>
+      <circle cx="112" cy="1400" r="3" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="100" cy="850" rx="5.5" ry="9" fill="#fce4e0"/>
+      <ellipse cx="109" cy="850" rx="5.5" ry="9" fill="#f8d5cf" transform="rotate(72 109 850)"/>
+      <ellipse cx="91" cy="850" rx="5.5" ry="9" fill="#fce4e0" transform="rotate(-72 91 850)"/>
+      <ellipse cx="100" cy="850" rx="5.5" ry="9" fill="#f8d5cf" transform="rotate(144 100 850)"/>
+      <ellipse cx="100" cy="850" rx="5.5" ry="9" fill="#fce4e0" transform="rotate(-144 100 850)"/>
+      <circle cx="100" cy="850" r="2.6" fill="#ebd88f"/>
+    </g>
+
+    <!-- extra small white flowers -->
+    <g class="bloom">
+      <ellipse cx="96" cy="1680" rx="5.5" ry="9" fill="#fff"/>
+      <ellipse cx="105" cy="1680" rx="5.5" ry="9" fill="#fffefb" transform="rotate(72 105 1680)"/>
+      <ellipse cx="87" cy="1680" rx="5.5" ry="9" fill="#fff" transform="rotate(-72 87 1680)"/>
+      <ellipse cx="96" cy="1680" rx="5.5" ry="9" fill="#fffefb" transform="rotate(144 96 1680)"/>
+      <ellipse cx="96" cy="1680" rx="5.5" ry="9" fill="#fff" transform="rotate(-144 96 1680)"/>
+      <circle cx="96" cy="1680" r="2.8" fill="#ebd88f"/>
+    </g>
+    <g class="bloom">
+      <ellipse cx="114" cy="1130" rx="5" ry="8.5" fill="#fff"/>
+      <ellipse cx="123" cy="1130" rx="5" ry="8.5" fill="#fffefb" transform="rotate(72 123 1130)"/>
+      <ellipse cx="105" cy="1130" rx="5" ry="8.5" fill="#fff" transform="rotate(-72 105 1130)"/>
+      <ellipse cx="114" cy="1130" rx="5" ry="8.5" fill="#fffefb" transform="rotate(144 114 1130)"/>
+      <ellipse cx="114" cy="1130" rx="5" ry="8.5" fill="#fff" transform="rotate(-144 114 1130)"/>
+      <circle cx="114" cy="1130" r="2.5" fill="#ead27a"/>
+    </g>
+    <g class="bloom">
+      <ellipse cx="102" cy="560" rx="4.8" ry="8" fill="#fce4e0"/>
+      <ellipse cx="110" cy="560" rx="4.8" ry="8" fill="#f8d5cf" transform="rotate(72 110 560)"/>
+      <ellipse cx="94" cy="560" rx="4.8" ry="8" fill="#fce4e0" transform="rotate(-72 94 560)"/>
+      <ellipse cx="102" cy="560" rx="4.8" ry="8" fill="#f8d5cf" transform="rotate(144 102 560)"/>
+      <ellipse cx="102" cy="560" rx="4.8" ry="8" fill="#fce4e0" transform="rotate(-144 102 560)"/>
+      <circle cx="102" cy="560" r="2.3" fill="#ebd88f"/>
+    </g>
+    <g class="bloom">
+      <ellipse cx="98" cy="280" rx="4.5" ry="7.5" fill="#fff"/>
+      <ellipse cx="106" cy="280" rx="4.5" ry="7.5" fill="#fffefb" transform="rotate(72 106 280)"/>
+      <ellipse cx="90" cy="280" rx="4.5" ry="7.5" fill="#fff" transform="rotate(-72 90 280)"/>
+      <ellipse cx="98" cy="280" rx="4.5" ry="7.5" fill="#fffefb" transform="rotate(144 98 280)"/>
+      <ellipse cx="98" cy="280" rx="4.5" ry="7.5" fill="#fff" transform="rotate(-144 98 280)"/>
+      <circle cx="98" cy="280" r="2.2" fill="#ead27a"/>
+    </g>
+
+    
+    <!-- extra leaves -->
+    <path class="vine-item" d="M95 2290 C67 2276,59 2244,79 2228 C101 2240,107 2276,95 2290Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M128 2050 C158 2036,166 2004,144 1988 C120 2002,116 2036,128 2050Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M84 1890 C45 1868,33 1822,63 1802 C94 1822,101 1868,84 1890Z" fill="#9fd69c"/>
+    <path class="vine-item" d="M130 1790 C170 1768,182 1722,152 1700 C120 1720,114 1768,130 1790Z" fill="#d8f0d2"/>
+    <path class="vine-item" d="M92 1630 C64 1616,56 1584,76 1568 C98 1580,104 1616,92 1630Z" fill="#aad8a6"/>
+    <path class="vine-item" d="M126 1560 C156 1546,164 1514,142 1498 C118 1512,114 1546,126 1560Z" fill="#b9df9f"/>
+    <path class="vine-item" d="M82 1370 C43 1348,31 1302,61 1282 C92 1302,99 1348,82 1370Z" fill="#d2eecb"/>
+    <path class="vine-item" d="M130 1230 C170 1208,182 1162,152 1140 C120 1160,114 1208,130 1230Z" fill="#dff4d8"/>
+    <path class="vine-item" d="M88 1095 C60 1081,52 1049,72 1033 C94 1045,100 1081,88 1095Z" fill="#a8dca4"/>
+    <path class="vine-item" d="M126 1010 C156 996,164 964,142 948 C118 962,114 996,126 1010Z" fill="#c4e8bc"/>
+    <path class="vine-item" d="M82 920 C43 898,31 852,61 832 C92 852,99 898,82 920Z" fill="#b5dfac"/>
+    <path class="vine-item" d="M118 810 C158 788,170 742,140 720 C108 740,102 788,118 810Z" fill="#cfecc7"/>
+    <path class="vine-item" d="M92 660 C64 646,56 614,76 598 C98 610,104 646,92 660Z" fill="#9fd69c"/>
+    <path class="vine-item" d="M126 515 C156 501,164 469,142 453 C118 467,114 501,126 515Z" fill="#d8f0d2"/>
+    <path class="vine-item" d="M84 340 C45 318,33 272,63 252 C94 272,101 318,84 340Z" fill="#aad8a6"/>
+    <path class="vine-item" d="M118 230 C158 208,170 162,140 140 C108 160,102 208,118 230Z" fill="#b9df9f"/>
+    <path class="vine-item" d="M94 60 C66 46,58 14,78 -2 C100 10,106 46,94 60Z" fill="#d2eecb"/>
+
+    <!-- extra flowers -->
+
+    <g class="bloom">
+      <ellipse cx="92" cy="2240" rx="7" ry="11" fill="#fce4e0"/>
+      <ellipse cx="103" cy="2240" rx="7" ry="11" fill="#f8d5cf" transform="rotate(72 103 2240)"/>
+      <ellipse cx="81" cy="2240" rx="7" ry="11" fill="#fce4e0" transform="rotate(-72 81 2240)"/>
+      <ellipse cx="92" cy="2240" rx="7" ry="11" fill="#fce4e0" transform="rotate(144 92 2240)"/>
+      <ellipse cx="92" cy="2240" rx="7" ry="11" fill="#fce4e0" transform="rotate(-144 92 2240)"/>
+      <circle cx="92" cy="2240" r="2.8" fill="#ead27a"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="114" cy="1920" rx="6.5" ry="10.5" fill="#fff"/>
+      <ellipse cx="124" cy="1920" rx="6.5" ry="10.5" fill="#fffefb" transform="rotate(72 124 1920)"/>
+      <ellipse cx="104" cy="1920" rx="6.5" ry="10.5" fill="#fff" transform="rotate(-72 104 1920)"/>
+      <ellipse cx="114" cy="1920" rx="6.5" ry="10.5" fill="#fff" transform="rotate(144 114 1920)"/>
+      <ellipse cx="114" cy="1920" rx="6.5" ry="10.5" fill="#fff" transform="rotate(-144 114 1920)"/>
+      <circle cx="114" cy="1920" r="2.8" fill="#ebd88f"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="96" cy="1480" rx="6" ry="10" fill="#fce4e0"/>
+      <ellipse cx="105" cy="1480" rx="6" ry="10" fill="#f8d5cf" transform="rotate(72 105 1480)"/>
+      <ellipse cx="87" cy="1480" rx="6" ry="10" fill="#fce4e0" transform="rotate(-72 87 1480)"/>
+      <ellipse cx="96" cy="1480" rx="6" ry="10" fill="#fce4e0" transform="rotate(144 96 1480)"/>
+      <ellipse cx="96" cy="1480" rx="6" ry="10" fill="#fce4e0" transform="rotate(-144 96 1480)"/>
+      <circle cx="96" cy="1480" r="2.8" fill="#ead27a"/>
+    </g>
+
+    <g class="bloom">
+      <ellipse cx="108" cy="640" rx="5.5" ry="9" fill="#fff"/>
+      <ellipse cx="116" cy="640" rx="5.5" ry="9" fill="#fffefb" transform="rotate(72 116 640)"/>
+      <ellipse cx="100" cy="640" rx="5.5" ry="9" fill="#fff" transform="rotate(-72 100 640)"/>
+      <ellipse cx="108" cy="640" rx="5.5" ry="9" fill="#fff" transform="rotate(144 108 640)"/>
+      <ellipse cx="108" cy="640" rx="5.5" ry="9" fill="#fff" transform="rotate(-144 108 640)"/>
+      <circle cx="108" cy="640" r="2.8" fill="#ebd88f"/>
+    </g>
+
+    <!-- filler buds -->
+    <circle class="vine-item" cx="90" cy="2190" r="4" fill="#f5ddd0" opacity=".7"/>
+    <circle class="vine-item" cx="115" cy="1720" r="3.5" fill="#f5ddd0" opacity=".65"/>
+    <circle class="vine-item" cx="88" cy="1110" r="3" fill="#f5ddd0" opacity=".6"/>
+    <circle class="vine-item" cx="110" cy="580" r="2.5" fill="#f5ddd0" opacity=".55"/>
+    <circle class="vine-item" cx="104" cy="2310" r="3.8" fill="#cde8c5" opacity=".65"/>
+    <circle class="vine-item" cx="92" cy="1940" r="3.5" fill="#ecd17b" opacity=".4"/>
+    <circle class="vine-item" cx="118" cy="1510" r="3" fill="#cde8c5" opacity=".6"/>
+    <circle class="vine-item" cx="86" cy="1310" r="3.2" fill="#ecd17b" opacity=".35"/>
+    <circle class="vine-item" cx="112" cy="870" r="2.8" fill="#cde8c5" opacity=".55"/>
+    <circle class="vine-item" cx="94" cy="390" r="2.5" fill="#ecd17b" opacity=".3"/>
+    <circle class="vine-item" cx="108" cy="140" r="2.2" fill="#cde8c5" opacity=".5"/>
+  </svg>
+</div>
+
+<div class="floral-center" aria-hidden="true">
+  <svg viewBox="0 0 220 2400" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="centerBloomGradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fffefb"/>
+        <stop offset="100%" stop-color="#b9df9f"/>
+      </linearGradient>
+    </defs>
+    <g transform="translate(690, 0) scale(1, 1.1667)">
+<path class="center-line" d="M112 2400 C70 2200,145 2040,100 1830 C62 1660,142 1470,98 1280 C65 1130,126 930,92 760 C64 620,105 420,92 0" fill="none" stroke="#84be85" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- leaves (dense) -->
+    <path class="center-item" d="M101 2240 C62 2218,50 2172,80 2152 C111 2172,118 2218,101 2240Z" fill="#dff4d8"/>
+    <path class="center-item" d="M124 2160 C164 2138,176 2092,146 2070 C114 2090,108 2138,124 2160Z" fill="#a8dca4"/>
+    <path class="center-item" d="M88 2200 C56 2186,48 2154,70 2138 C94 2150,100 2184,88 2200Z" fill="#c4e8bc"/>
+    <path class="center-item" d="M130 2110 C168 2090,178 2054,152 2034 C126 2050,118 2086,130 2110Z" fill="#b5dfac"/>
+    <path class="center-item" d="M99 2060 C62 2040,50 1998,78 1978 C108 1996,116 2038,99 2060Z" fill="#cfecc7"/>
+    <path class="center-item" d="M122 1965 C162 1942,174 1898,144 1874 C114 1892,108 1940,122 1965Z" fill="#9fd69c"/>
+    <path class="center-item" d="M86 2010 C54 1996,46 1964,68 1948 C92 1960,98 1994,86 2010Z" fill="#d8f0d2"/>
+    <path class="center-item" d="M132 1920 C166 1900,176 1866,152 1846 C128 1862,120 1896,132 1920Z" fill="#aad8a6"/>
+    <path class="center-item" d="M98 1870 C60 1848,49 1806,77 1784 C107 1802,114 1848,98 1870Z" fill="#dff4d8"/>
+    <path class="center-item" d="M124 1770 C164 1746,176 1702,146 1678 C114 1698,108 1746,124 1770Z" fill="#b9df9f"/>
+    <path class="center-item" d="M86 1820 C54 1806,46 1774,68 1758 C92 1770,98 1804,86 1820Z" fill="#c4e8bc"/>
+    <path class="center-item" d="M130 1720 C164 1702,174 1668,150 1650 C126 1664,118 1698,130 1720Z" fill="#d2eecb"/>
+    <path class="center-item" d="M98 1660 C60 1640,50 1602,78 1582 C107 1600,114 1640,98 1660Z" fill="#cfecc7"/>
+    <path class="center-item" d="M122 1560 C160 1538,172 1496,144 1472 C114 1490,108 1536,122 1560Z" fill="#a8dca4"/>
+    <path class="center-item" d="M85 1610 C55 1596,47 1566,68 1550 C90 1562,96 1594,85 1610Z" fill="#b5dfac"/>
+    <path class="center-item" d="M128 1510 C162 1492,172 1460,148 1442 C124 1456,116 1488,128 1510Z" fill="#d8f0d2"/>
+    <path class="center-item" d="M99 1460 C64 1442,54 1404,80 1386 C109 1402,115 1442,99 1460Z" fill="#dff4d8"/>
+    <path class="center-item" d="M123 1360 C160 1340,172 1300,145 1278 C116 1294,109 1338,123 1360Z" fill="#9fd69c"/>
+    <path class="center-item" d="M86 1410 C56 1396,48 1366,70 1350 C92 1362,98 1394,86 1410Z" fill="#c4e8bc"/>
+    <path class="center-item" d="M128 1310 C160 1294,170 1262,148 1244 C124 1258,116 1290,128 1310Z" fill="#aad8a6"/>
+    <path class="center-item" d="M100 1260 C66 1244,56 1210,80 1190 C108 1204,116 1244,100 1260Z" fill="#cfecc7"/>
+    <path class="center-item" d="M122 1150 C158 1128,170 1090,144 1068 C115 1084,108 1128,122 1150Z" fill="#a8dca4"/>
+    <path class="center-item" d="M85 1200 C56 1186,48 1158,68 1142 C90 1154,96 1184,85 1200Z" fill="#d2eecb"/>
+    <path class="center-item" d="M126 1100 C158 1084,168 1054,144 1036 C122 1050,114 1080,126 1100Z" fill="#b5dfac"/>
+    <path class="center-item" d="M98 1030 C66 1014,56 982,80 966 C106 980,112 1012,98 1030Z" fill="#dff4d8"/>
+    <path class="center-item" d="M118 915 C154 894,166 858,141 836 C114 852,107 894,118 915Z" fill="#b9df9f"/>
+    <path class="center-item" d="M86 970 C58 956,50 930,70 916 C92 928,96 954,86 970Z" fill="#c4e8bc"/>
+    <path class="center-item" d="M124 870 C154 854,164 826,142 810 C120 822,112 852,124 870Z" fill="#d8f0d2"/>
+    <path class="center-item" d="M98 790 C68 776,60 748,80 734 C104 746,110 774,98 790Z" fill="#cfecc7"/>
+    <path class="center-item" d="M116 640 C150 622,160 588,138 568 C112 582,106 618,116 640Z" fill="#dff4d8"/>
+    <path class="center-item" d="M88 720 C60 708,52 682,72 668 C94 678,98 706,88 720Z" fill="#aad8a6"/>
+    <path class="center-item" d="M120 580 C148 566,158 540,138 526 C116 536,110 564,120 580Z" fill="#b5dfac"/>
+    <path class="center-item" d="M100 500 C70 484,62 454,82 438 C106 452,112 484,100 500Z" fill="#b9df9f"/>
+    <path class="center-item" d="M114 335 C146 318,156 286,134 266 C110 280,104 314,114 335Z" fill="#cfecc7"/>
+    <path class="center-item" d="M90 420 C64 408,56 382,76 368 C96 378,100 406,90 420Z" fill="#d2eecb"/>
+    <path class="center-item" d="M116 270 C142 258,150 234,132 220 C112 230,106 256,116 270Z" fill="#c4e8bc"/>
+    <path class="center-item" d="M99 180 C70 166,62 140,82 126 C105 138,111 166,99 180Z" fill="#dff4d8"/>
+    <path class="center-item" d="M110 110 C136 100,144 78,126 66 C108 74,102 98,110 110Z" fill="#b5dfac"/>
+
+    <!-- more flowers -->
+    <g class="center-bloom">
+      <ellipse cx="108" cy="2100" rx="9" ry="16" fill="#ffffff"/>
+      <ellipse cx="122" cy="2100" rx="9" ry="16" fill="#fffefb" transform="rotate(72 122 2100)"/>
+      <ellipse cx="94" cy="2100" rx="9" ry="16" fill="#fffefb" transform="rotate(-72 94 2100)"/>
+      <ellipse cx="108" cy="2100" rx="9" ry="16" fill="#ffffff" transform="rotate(144 108 2100)"/>
+      <ellipse cx="108" cy="2100" rx="9" ry="16" fill="#ffffff" transform="rotate(-144 108 2100)"/>
+      <circle cx="108" cy="2100" r="4.8" fill="#ebd88f"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="101" cy="1825" rx="8" ry="14" fill="#ffffff"/>
+      <ellipse cx="114" cy="1825" rx="8" ry="14" fill="#fffefb" transform="rotate(72 114 1825)"/>
+      <ellipse cx="88" cy="1825" rx="8" ry="14" fill="#fffefb" transform="rotate(-72 88 1825)"/>
+      <ellipse cx="101" cy="1825" rx="8" ry="14" fill="#ffffff" transform="rotate(144 101 1825)"/>
+      <ellipse cx="101" cy="1825" rx="8" ry="14" fill="#ffffff" transform="rotate(-144 101 1825)"/>
+      <circle cx="101" cy="1825" r="4.3" fill="#ead27a"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="110" cy="1540" rx="8" ry="13" fill="#ffffff"/>
+      <ellipse cx="122" cy="1540" rx="8" ry="13" fill="#fffefb" transform="rotate(72 122 1540)"/>
+      <ellipse cx="98" cy="1540" rx="8" ry="13" fill="#fffefb" transform="rotate(-72 98 1540)"/>
+      <ellipse cx="110" cy="1540" rx="8" ry="13" fill="#ffffff" transform="rotate(144 110 1540)"/>
+      <ellipse cx="110" cy="1540" rx="8" ry="13" fill="#ffffff" transform="rotate(-144 110 1540)"/>
+      <circle cx="110" cy="1540" r="4" fill="#ebd88f"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="100" cy="1260" rx="7.5" ry="12.5" fill="#ffffff"/>
+      <ellipse cx="112" cy="1260" rx="7.5" ry="12.5" fill="#fffefb" transform="rotate(72 112 1260)"/>
+      <ellipse cx="88" cy="1260" rx="7.5" ry="12.5" fill="#fffefb" transform="rotate(-72 88 1260)"/>
+      <ellipse cx="100" cy="1260" rx="7.5" ry="12.5" fill="#ffffff" transform="rotate(144 100 1260)"/>
+      <ellipse cx="100" cy="1260" rx="7.5" ry="12.5" fill="#ffffff" transform="rotate(-144 100 1260)"/>
+      <circle cx="100" cy="1260" r="3.8" fill="#ecd17b"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="108" cy="990" rx="7" ry="12" fill="#ffffff"/>
+      <ellipse cx="119" cy="990" rx="7" ry="12" fill="#fffefb" transform="rotate(72 119 990)"/>
+      <ellipse cx="97" cy="990" rx="7" ry="12" fill="#fffefb" transform="rotate(-72 97 990)"/>
+      <ellipse cx="108" cy="990" rx="7" ry="12" fill="#ffffff" transform="rotate(144 108 990)"/>
+      <ellipse cx="108" cy="990" rx="7" ry="12" fill="#ffffff" transform="rotate(-144 108 990)"/>
+      <circle cx="108" cy="990" r="3.6" fill="#ebd88f"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="100" cy="710" rx="6.8" ry="11.5" fill="#ffffff"/>
+      <ellipse cx="111" cy="710" rx="6.8" ry="11.5" fill="#fffefb" transform="rotate(72 111 710)"/>
+      <ellipse cx="89" cy="710" rx="6.8" ry="11.5" fill="#fffefb" transform="rotate(-72 89 710)"/>
+      <ellipse cx="100" cy="710" rx="6.8" ry="11.5" fill="#ffffff" transform="rotate(144 100 710)"/>
+      <ellipse cx="100" cy="710" rx="6.8" ry="11.5" fill="#ffffff" transform="rotate(-144 100 710)"/>
+      <circle cx="100" cy="710" r="3.4" fill="#ebd88f"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="106" cy="430" rx="6.2" ry="10.5" fill="#ffffff"/>
+      <ellipse cx="116" cy="430" rx="6.2" ry="10.5" fill="#fffefb" transform="rotate(72 116 430)"/>
+      <ellipse cx="96" cy="430" rx="6.2" ry="10.5" fill="#fffefb" transform="rotate(-72 96 430)"/>
+      <ellipse cx="106" cy="430" rx="6.2" ry="10.5" fill="#ffffff" transform="rotate(144 106 430)"/>
+      <ellipse cx="106" cy="430" rx="6.2" ry="10.5" fill="#ffffff" transform="rotate(-144 106 430)"/>
+      <circle cx="106" cy="430" r="3.1" fill="#ead27a"/>
+    </g>
+
+    <!-- pink/coral accent flowers -->
+    <g class="center-bloom">
+      <ellipse cx="95" cy="2000" rx="7" ry="11" fill="#fce4e0"/>
+      <ellipse cx="106" cy="2000" rx="7" ry="11" fill="#f8d5cf" transform="rotate(72 106 2000)"/>
+      <ellipse cx="84" cy="2000" rx="7" ry="11" fill="#fce4e0" transform="rotate(-72 84 2000)"/>
+      <ellipse cx="95" cy="2000" rx="7" ry="11" fill="#f8d5cf" transform="rotate(144 95 2000)"/>
+      <ellipse cx="95" cy="2000" rx="7" ry="11" fill="#fce4e0" transform="rotate(-144 95 2000)"/>
+      <circle cx="95" cy="2000" r="3.2" fill="#ead27a"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="112" cy="1400" rx="6.5" ry="10" fill="#fce4e0"/>
+      <ellipse cx="122" cy="1400" rx="6.5" ry="10" fill="#f8d5cf" transform="rotate(72 122 1400)"/>
+      <ellipse cx="102" cy="1400" rx="6.5" ry="10" fill="#fce4e0" transform="rotate(-72 102 1400)"/>
+      <ellipse cx="112" cy="1400" rx="6.5" ry="10" fill="#f8d5cf" transform="rotate(144 112 1400)"/>
+      <ellipse cx="112" cy="1400" rx="6.5" ry="10" fill="#fce4e0" transform="rotate(-144 112 1400)"/>
+      <circle cx="112" cy="1400" r="3" fill="#ebd88f"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="100" cy="850" rx="5.5" ry="9" fill="#fce4e0"/>
+      <ellipse cx="109" cy="850" rx="5.5" ry="9" fill="#f8d5cf" transform="rotate(72 109 850)"/>
+      <ellipse cx="91" cy="850" rx="5.5" ry="9" fill="#fce4e0" transform="rotate(-72 91 850)"/>
+      <ellipse cx="100" cy="850" rx="5.5" ry="9" fill="#f8d5cf" transform="rotate(144 100 850)"/>
+      <ellipse cx="100" cy="850" rx="5.5" ry="9" fill="#fce4e0" transform="rotate(-144 100 850)"/>
+      <circle cx="100" cy="850" r="2.6" fill="#ebd88f"/>
+    </g>
+
+    <!-- extra small white flowers -->
+    <g class="center-bloom">
+      <ellipse cx="96" cy="1680" rx="5.5" ry="9" fill="#fff"/>
+      <ellipse cx="105" cy="1680" rx="5.5" ry="9" fill="#fffefb" transform="rotate(72 105 1680)"/>
+      <ellipse cx="87" cy="1680" rx="5.5" ry="9" fill="#fff" transform="rotate(-72 87 1680)"/>
+      <ellipse cx="96" cy="1680" rx="5.5" ry="9" fill="#fffefb" transform="rotate(144 96 1680)"/>
+      <ellipse cx="96" cy="1680" rx="5.5" ry="9" fill="#fff" transform="rotate(-144 96 1680)"/>
+      <circle cx="96" cy="1680" r="2.8" fill="#ebd88f"/>
+    </g>
+    <g class="center-bloom">
+      <ellipse cx="114" cy="1130" rx="5" ry="8.5" fill="#fff"/>
+      <ellipse cx="123" cy="1130" rx="5" ry="8.5" fill="#fffefb" transform="rotate(72 123 1130)"/>
+      <ellipse cx="105" cy="1130" rx="5" ry="8.5" fill="#fff" transform="rotate(-72 105 1130)"/>
+      <ellipse cx="114" cy="1130" rx="5" ry="8.5" fill="#fffefb" transform="rotate(144 114 1130)"/>
+      <ellipse cx="114" cy="1130" rx="5" ry="8.5" fill="#fff" transform="rotate(-144 114 1130)"/>
+      <circle cx="114" cy="1130" r="2.5" fill="#ead27a"/>
+    </g>
+    <g class="center-bloom">
+      <ellipse cx="102" cy="560" rx="4.8" ry="8" fill="#fce4e0"/>
+      <ellipse cx="110" cy="560" rx="4.8" ry="8" fill="#f8d5cf" transform="rotate(72 110 560)"/>
+      <ellipse cx="94" cy="560" rx="4.8" ry="8" fill="#fce4e0" transform="rotate(-72 94 560)"/>
+      <ellipse cx="102" cy="560" rx="4.8" ry="8" fill="#f8d5cf" transform="rotate(144 102 560)"/>
+      <ellipse cx="102" cy="560" rx="4.8" ry="8" fill="#fce4e0" transform="rotate(-144 102 560)"/>
+      <circle cx="102" cy="560" r="2.3" fill="#ebd88f"/>
+    </g>
+    <g class="center-bloom">
+      <ellipse cx="98" cy="280" rx="4.5" ry="7.5" fill="#fff"/>
+      <ellipse cx="106" cy="280" rx="4.5" ry="7.5" fill="#fffefb" transform="rotate(72 106 280)"/>
+      <ellipse cx="90" cy="280" rx="4.5" ry="7.5" fill="#fff" transform="rotate(-72 90 280)"/>
+      <ellipse cx="98" cy="280" rx="4.5" ry="7.5" fill="#fffefb" transform="rotate(144 98 280)"/>
+      <ellipse cx="98" cy="280" rx="4.5" ry="7.5" fill="#fff" transform="rotate(-144 98 280)"/>
+      <circle cx="98" cy="280" r="2.2" fill="#ead27a"/>
+    </g>
+
+    
+    <!-- extra leaves -->
+    <path class="center-item" d="M95 2290 C67 2276,59 2244,79 2228 C101 2240,107 2276,95 2290Z" fill="#b5dfac"/>
+    <path class="center-item" d="M128 2050 C158 2036,166 2004,144 1988 C120 2002,116 2036,128 2050Z" fill="#cfecc7"/>
+    <path class="center-item" d="M84 1890 C45 1868,33 1822,63 1802 C94 1822,101 1868,84 1890Z" fill="#9fd69c"/>
+    <path class="center-item" d="M130 1790 C170 1768,182 1722,152 1700 C120 1720,114 1768,130 1790Z" fill="#d8f0d2"/>
+    <path class="center-item" d="M92 1630 C64 1616,56 1584,76 1568 C98 1580,104 1616,92 1630Z" fill="#aad8a6"/>
+    <path class="center-item" d="M126 1560 C156 1546,164 1514,142 1498 C118 1512,114 1546,126 1560Z" fill="#b9df9f"/>
+    <path class="center-item" d="M82 1370 C43 1348,31 1302,61 1282 C92 1302,99 1348,82 1370Z" fill="#d2eecb"/>
+    <path class="center-item" d="M130 1230 C170 1208,182 1162,152 1140 C120 1160,114 1208,130 1230Z" fill="#dff4d8"/>
+    <path class="center-item" d="M88 1095 C60 1081,52 1049,72 1033 C94 1045,100 1081,88 1095Z" fill="#a8dca4"/>
+    <path class="center-item" d="M126 1010 C156 996,164 964,142 948 C118 962,114 996,126 1010Z" fill="#c4e8bc"/>
+    <path class="center-item" d="M82 920 C43 898,31 852,61 832 C92 852,99 898,82 920Z" fill="#b5dfac"/>
+    <path class="center-item" d="M118 810 C158 788,170 742,140 720 C108 740,102 788,118 810Z" fill="#cfecc7"/>
+    <path class="center-item" d="M92 660 C64 646,56 614,76 598 C98 610,104 646,92 660Z" fill="#9fd69c"/>
+    <path class="center-item" d="M126 515 C156 501,164 469,142 453 C118 467,114 501,126 515Z" fill="#d8f0d2"/>
+    <path class="center-item" d="M84 340 C45 318,33 272,63 252 C94 272,101 318,84 340Z" fill="#aad8a6"/>
+    <path class="center-item" d="M118 230 C158 208,170 162,140 140 C108 160,102 208,118 230Z" fill="#b9df9f"/>
+    <path class="center-item" d="M94 60 C66 46,58 14,78 -2 C100 10,106 46,94 60Z" fill="#d2eecb"/>
+
+    <!-- extra flowers -->
+
+    <g class="center-bloom">
+      <ellipse cx="92" cy="2240" rx="7" ry="11" fill="#fce4e0"/>
+      <ellipse cx="103" cy="2240" rx="7" ry="11" fill="#f8d5cf" transform="rotate(72 103 2240)"/>
+      <ellipse cx="81" cy="2240" rx="7" ry="11" fill="#fce4e0" transform="rotate(-72 81 2240)"/>
+      <ellipse cx="92" cy="2240" rx="7" ry="11" fill="#fce4e0" transform="rotate(144 92 2240)"/>
+      <ellipse cx="92" cy="2240" rx="7" ry="11" fill="#fce4e0" transform="rotate(-144 92 2240)"/>
+      <circle cx="92" cy="2240" r="2.8" fill="#ead27a"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="114" cy="1920" rx="6.5" ry="10.5" fill="#fff"/>
+      <ellipse cx="124" cy="1920" rx="6.5" ry="10.5" fill="#fffefb" transform="rotate(72 124 1920)"/>
+      <ellipse cx="104" cy="1920" rx="6.5" ry="10.5" fill="#fff" transform="rotate(-72 104 1920)"/>
+      <ellipse cx="114" cy="1920" rx="6.5" ry="10.5" fill="#fff" transform="rotate(144 114 1920)"/>
+      <ellipse cx="114" cy="1920" rx="6.5" ry="10.5" fill="#fff" transform="rotate(-144 114 1920)"/>
+      <circle cx="114" cy="1920" r="2.8" fill="#ebd88f"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="96" cy="1480" rx="6" ry="10" fill="#fce4e0"/>
+      <ellipse cx="105" cy="1480" rx="6" ry="10" fill="#f8d5cf" transform="rotate(72 105 1480)"/>
+      <ellipse cx="87" cy="1480" rx="6" ry="10" fill="#fce4e0" transform="rotate(-72 87 1480)"/>
+      <ellipse cx="96" cy="1480" rx="6" ry="10" fill="#fce4e0" transform="rotate(144 96 1480)"/>
+      <ellipse cx="96" cy="1480" rx="6" ry="10" fill="#fce4e0" transform="rotate(-144 96 1480)"/>
+      <circle cx="96" cy="1480" r="2.8" fill="#ead27a"/>
+    </g>
+
+    <g class="center-bloom">
+      <ellipse cx="108" cy="640" rx="5.5" ry="9" fill="#fff"/>
+      <ellipse cx="116" cy="640" rx="5.5" ry="9" fill="#fffefb" transform="rotate(72 116 640)"/>
+      <ellipse cx="100" cy="640" rx="5.5" ry="9" fill="#fff" transform="rotate(-72 100 640)"/>
+      <ellipse cx="108" cy="640" rx="5.5" ry="9" fill="#fff" transform="rotate(144 108 640)"/>
+      <ellipse cx="108" cy="640" rx="5.5" ry="9" fill="#fff" transform="rotate(-144 108 640)"/>
+      <circle cx="108" cy="640" r="2.8" fill="#ebd88f"/>
+    </g>
+
+    <!-- filler buds -->
+    <circle class="center-item" cx="90" cy="2190" r="4" fill="#f5ddd0" opacity=".7"/>
+    <circle class="center-item" cx="115" cy="1720" r="3.5" fill="#f5ddd0" opacity=".65"/>
+    <circle class="center-item" cx="88" cy="1110" r="3" fill="#f5ddd0" opacity=".6"/>
+    <circle class="center-item" cx="110" cy="580" r="2.5" fill="#f5ddd0" opacity=".55"/>
+    <circle class="center-item" cx="104" cy="2310" r="3.8" fill="#cde8c5" opacity=".65"/>
+    <circle class="center-item" cx="92" cy="1940" r="3.5" fill="#ecd17b" opacity=".4"/>
+    <circle class="center-item" cx="118" cy="1510" r="3" fill="#cde8c5" opacity=".6"/>
+    <circle class="center-item" cx="86" cy="1310" r="3.2" fill="#ecd17b" opacity=".35"/>
+    <circle class="center-item" cx="112" cy="870" r="2.8" fill="#cde8c5" opacity=".55"/>
+    <circle class="center-item" cx="94" cy="390" r="2.5" fill="#ecd17b" opacity=".3"/>
+    <circle class="center-item" cx="108" cy="140" r="2.2" fill="#cde8c5" opacity=".5"/>
+    </g>
+  </svg>
+</div>
+
+<nav class="navbar" id="navbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">Wedding</a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#events">Ablauf</a>
+        <a href="#stay">Hotels</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="sub">Sebouh &amp; Ranim</div>
+      <h1>We Are Getting Married</h1>
+      <div class="lead">Saturday, 1 August 2026 &middot; Vienna, Austria</div>
+      <!-- <a href="#rsvp" class="save-date">RSVP &mdash; Let Us Know You&rsquo;re Coming</a> -->
+    </div>
+  </section>
+
+  <div class="countdown-strip">
+    <div class="countdown" id="countdown" aria-label="Wedding countdown">
+      <div class="count-box"><span id="days">0</span><small>Days</small></div>
+      <div class="count-box"><span id="hours">0</span><small>Hours</small></div>
+      <div class="count-box"><span id="minutes">0</span><small>Minutes</small></div>
+      <div class="count-box"><span id="seconds">0</span><small>Seconds</small></div>
+    </div>
+  </div>
+
+  <section class="section" id="events">
+    <div class="container">
+      <div class="section-title">
+        <div class="sub">The Day</div>
+        <h2>Wedding Schedule</h2>
+        <p>Join us as we celebrate our love &mdash; here&rsquo;s everything you need to know about the day.</p>
+      </div>
+
+      <div class="schedule-grid">
+        <article class="schedule-card">
+          <img class="card-img" src="images/church.jpg" alt="Church ceremony">
+          <div class="card-body">
+            <div class="time-badge"><span class="icon">⛪</span> 17:30 Uhr</div>
+            <h3>Church Ceremony</h3>
+            <p>We invite you to witness our sacred union at one of Vienna&rsquo;s most beautiful churches.</p>
+            <ul class="detail-list">
+              <li><span class="li-icon">📍</span> St. Peterskirche, Peterspl. 1010 Vienna</li>
+              <li><span class="li-icon">🕐</span> Please arrive by 17:10 Uhr</li>
+              <li><span class="li-icon">👔</span> Formal / Semi-Formal Attire</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="schedule-card">
+          <img class="card-img" src="images/wedding.jpg" alt="Reception &amp; Party venue">
+          <div class="card-body">
+            <div class="time-badge"><span class="icon">🎉</span> 20:00 Uhr</div>
+            <h3>Dinner &amp; Party</h3>
+            <p>An unforgettable evening of dinner, speeches, first dance, and celebration until late.</p>
+            <ul class="detail-list">
+              <li><span class="li-icon">📍</span> Diamond Hall, Oberlaarstraße 253, Vienna</li>
+              <li><span class="li-icon">🍽️</span> Dinner served at 20:30 Uhr</li>
+              <li><span class="li-icon">💃</span> Party &amp; dancing until late</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="stay">
+    <div class="container">
+      <div class="section-title">
+        <div class="sub">For Our Guests</div>
+        <h2>Hotel Empfehlungen &amp; Travel Info</h2>
+        <p>This section is specially added for practical details like hotel suggestions, shuttle info, and check-in advice.</p>
+      </div>
+
+      <div class="stay-grid">
+        <article class="stay-card">
+          <div class="stay-content">
+            <span class="badge">Hotel Recommendation 01</span>
+            <h3>Leonardo Hotel Vienna</h3>
+            <p>Elegant option close to the city center and about 10 minutes from the venue.</p>
+            <ul class="info-list">
+              <li><strong>Address:</strong> Matrosengasse 6-8, 1060 Wien, Austria </li>
+              <li><strong>Distance:</strong> 20 min by car</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="stay-card">
+          <div class="stay-content">
+            <span class="badge">Hotel Recommendation 02</span>
+            <h3>Austria Trend Hotel Ananas</h3>
+            <p>Elegant option close to the city center and about 10 minutes from the venue.</p>
+            <ul class="info-list">
+              <li><strong>Address:</strong> Rechte Wienzeile 93-95 Eingang, Sonnenhofgasse 8/10, 1050 Wien, Austria</li>
+              <li><strong>Distance:</strong> 20 min by car</li>
+
+            </ul>
+          </div>
+        </article>
+
+        <article class="stay-card">
+          <div class="stay-content">
+            <span class="badge">Hotel Recommendation 03</span>
+            <h3>Ibis Wien City</h3>
+            <p>Smaller and charming option for guests who want to stay in the old town.</p>
+            <ul class="info-list">
+              <li><strong>Address:</strong> Schönbrunner Str. 92, 1050 Wien, Austria</li>
+              <li><strong>Distance:</strong> 15 min by car</li>
+
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="plan-grid triple" style="margin-top:28px;">
+        <article class="plan-card">
+          <div class="plan-content">
+            <div class="plan-icon">🚌</div>
+            <h3>Public Transportation</h3>
+            <p>Use WienMobil App for schedules and routes.</p>
+            <img class="plan-photo" src="images/wienmobile.png" alt="Public transport info" onclick="openLightbox(this.src)">
+          </div>
+        </article>
+
+        <article class="plan-card">
+          <div class="plan-content">
+            <div class="plan-icon">🚗</div>
+            <h3>Parking</h3>
+            <p> guest parking, or taxi drop-off points.</p>
+          </div>
+        </article>
+
+        <article class="plan-card">
+          <div class="plan-content">
+            <div class="plan-icon">🕒</div>
+            <h3>Church Time Reminder</h3>
+            <p>Perfect place to repeat: church starts at 17:30 Uhr, please arrive by 17:10 Uhr.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <section class="rsvp-section" id="rsvp">
+    <div class="container">
+      <div class="section-title">
+        <div class="sub">Will You Be There?</div>
+        <h2>RSVP</h2>
+      </div>
+
+      <div class="rsvp-card">
+        <div class="rsvp-header">
+          <div class="rsvp-icon">💌</div>
+          <h3>We&rsquo;d Love to Have You</h3>
+          <p>Please let us know if you can celebrate with us &mdash; it means the world to us!</p>
+        </div>
+
+        <form class="rsvp-form" id="rsvp-form" action="https://formspree.io/f/xjgjajpw" method="POST">
+          <input type="hidden" name="_subject" value="New Wedding RSVP!">
+          <div class="rsvp-row">
+            <div class="rsvp-field">
+              <label for="rsvp-name">Your Name</label>
+              <input type="text" id="rsvp-name" name="name" placeholder="Full name" required />
+            </div>
+            <div class="rsvp-field">
+              <label for="rsvp-email">Email</label>
+              <input type="email" id="rsvp-email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+
+          <div class="rsvp-row">
+            <div class="rsvp-field">
+              <label for="rsvp-attend">Will you attend?</label>
+              <select id="rsvp-attend" name="attending" required>
+                <option value="">Please select&hellip;</option>
+                <option value="yes">Joyfully accepts! 🎉</option>
+                <option value="no">Regretfully declines 😢</option>
+              </select>
+            </div>
+            <div class="rsvp-field">
+              <label for="rsvp-guests">Number of Guests</label>
+              <input type="number" id="rsvp-guests" name="guests" placeholder="Including yourself" min="1" max="10" value="1" />
+            </div>
+          </div>
+
+          <div class="rsvp-row">
+            <div class="rsvp-field full">
+              <label for="rsvp-msg">Leave Us a Message <small style="font-weight:400;color:var(--muted)">(optional)</small></label>
+              <textarea id="rsvp-msg" name="message" placeholder="Dietary needs, song requests, or just a sweet note&hellip;"></textarea>
+            </div>
+          </div>
+
+          <div class="rsvp-submit-wrap">
+            <button type="submit" class="rsvp-btn">Send RSVP &hearts;</button>
+          </div>
+          <p class="rsvp-note">We kindly ask you to respond by <strong>1 July 2026</strong>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <div class="sub">Moments</div>
+        <h2>Our Gallery</h2>
+        <p>A few of our favourite memories together</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item tall" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="images/20258862.jpg" alt="Couple photo" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="images/20258871.jpg" alt="Couple photo" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="images/20258880.jpg" alt="Couple photo" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="images/20258903.jpg" alt="Couple photo" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="images/20258913.jpg" alt="Couple photo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="Enlarged photo" onclick="event.stopPropagation()">
+  </div>
+
+  <footer class="footer">
+    &copy; 2026 Sebouh &amp; Ranim &middot; Made with &hearts;
+  </footer>
+
+  <script>
+    const weddingDate = new Date('2026-08-01T18:00:00').getTime();
+    const navbar = document.getElementById('navbar');
+
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function updateCountdown() {
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+      const countdown = document.getElementById('countdown');
+
+      if (!daysEl || !hoursEl || !minutesEl || !secondsEl || !countdown) return;
+
+      const now = Date.now();
+      const distance = weddingDate - now;
+
+      if (distance <= 0) {
+        countdown.innerHTML = "<div class='count-box done'>Today 🎉</div>";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      daysEl.textContent = days;
+      hoursEl.textContent = hours;
+      minutesEl.textContent = minutes;
+      secondsEl.textContent = seconds;
+    }
+
+    function updateFlorals() {
+      const scrollTop = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = maxScroll > 0 ? Math.min(scrollTop / maxScroll, 1) : 0;
+
+      const easedGrowth = easeOutCubic(progress);
+
+      document.documentElement.style.setProperty('--grow', Math.max(easedGrowth, 0.02));
+      document.documentElement.style.setProperty('--center-grow', Math.max(easedGrowth, 0.02));
+
+      const sideItems = document.querySelectorAll('.vine-item, .bloom');
+      sideItems.forEach((item, index) => {
+        const threshold = index / sideItems.length;
+        const local = Math.max(0, Math.min((progress - threshold) * 7, 1));
+        const eased = easeOutCubic(local);
+        const scale = 0.05 + eased * 0.95;
+        const opacity = 0.1 + eased * 0.9;
+
+        item.style.setProperty('--leaf-scale', scale.toFixed(3));
+        item.style.setProperty('--leaf-opacity', opacity.toFixed(3));
+      });
+
+      const centerItems = document.querySelectorAll('.center-item, .center-bloom');
+      centerItems.forEach((item, index) => {
+        const threshold = (index / centerItems.length) * 0.95;
+        const local = Math.max(0, Math.min((progress - threshold) * 5.5, 1));
+        const eased = easeOutCubic(local);
+        const scale = 0.05 + eased * 0.95;
+        const opacity = 0.08 + eased * 0.92;
+
+        item.style.setProperty('--center-scale', scale.toFixed(3));
+        item.style.setProperty('--center-opacity', opacity.toFixed(3));
+      });
+    }
+
+    function onScroll() {
+      if (navbar) {
+        navbar.classList.toggle('scrolled', window.scrollY > 30);
+      }
+      requestAnimationFrame(updateFlorals);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCountdown();
+      updateFlorals();
+      setInterval(updateCountdown, 1000);
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Lightbox
+      window.openLightbox = function(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+      window.closeLightbox = function() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+      };
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+
+      const rsvpForm = document.getElementById('rsvp-form');
+      if (rsvpForm) {
+        rsvpForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const btn = rsvpForm.querySelector('.rsvp-btn');
+          const name = document.getElementById('rsvp-name').value.trim();
+          btn.disabled = true;
+          btn.textContent = 'Sending\u2026';
+
+          fetch('https://formspree.io/f/xjgjajpw', {
+            method: 'POST',
+            body: new FormData(rsvpForm),
+            headers: { 'Accept': 'application/json' }
+          }).then(function(res) {
+            const card = rsvpForm.closest('.rsvp-card');
+            if (res.ok) {
+              card.innerHTML =
+                '<div class="rsvp-success">' +
+                  '<span class="success-icon">\uD83D\uDC8C</span>' +
+                  '<h3>Thank You' + (name ? ', ' + name : '') + '!</h3>' +
+                  '<p>Your RSVP has been sent successfully!<br>We can\'t wait to celebrate with you!</p>' +
+                '</div>';
+            } else {
+              card.innerHTML =
+                '<div class="rsvp-success">' +
+                  '<span class="success-icon">\uD83D\uDE14</span>' +
+                  '<h3>Oops, something went wrong</h3>' +
+                  '<p>Please try again or email us directly at<br><a href="mailto:hazem.obeidin@outlook.com" style="color:var(--primary)">hazem.obeidin@outlook.com</a></p>' +
+                '</div>';
+            }
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }).catch(function() {
+            btn.disabled = false;
+            btn.innerHTML = 'Send RSVP &hearts;';
+            alert('Network error \u2014 please check your connection and try again.');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
