@@ -1011,6 +1011,17 @@
 .gallery-item.tall {
   grid-row: span 2;
 }
+/* Hide on desktop */
+.mobile-only {
+  display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 600px) {
+  .mobile-only {
+    display: block;
+  }
+}
   </style>
 </head>
 <body>
@@ -2049,9 +2060,7 @@
         <p>A few of our favourite memories together</p>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item tall" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/20258862.JPG" alt="Couple photo" loading="lazy">
-        </div>
+
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="images/20258871.JPG" alt="Couple photo" loading="lazy">
         </div>
@@ -2059,17 +2068,12 @@
           <img src="images/20258880.JPG" alt="Couple photo" loading="lazy">
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/20258903.JPG" alt="Couple photo" loading="lazy">
+          <img src="images/20258808.JPG" alt="Couple photo" loading="lazy">
         </div>
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/20258913.JPG" alt="Couple photo" loading="lazy">
+        <div class="gallery-item mobile-only" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="images/20258778.JPG" alt="Couple photo" loading="lazy">
         </div>
-<div class="gallery-item tall" onclick="openLightbox(this.querySelector('img').src)">
-  <img src="images/20258808.JPG" alt="Couple photo" loading="lazy">
-</div>
-<div class="gallery-item wide" onclick="openLightbox(this.querySelector('img').src)">
-  <img src="images/20258778.JPG" alt="Couple photo" loading="lazy">
-</div>
+
       </div>
     </div>
   </section>
