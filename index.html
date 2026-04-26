@@ -2088,8 +2088,23 @@
 
     emailjs.sendForm("service_weddingSR", "template_ws1re7d", this)
       .then(function () {
-        document.querySelector(".rsvp-note").innerHTML = "✅ RSVP sent! Thank you 💌";
-        document.getElementById("rsvp-form").reset();
+  const note = document.querySelector(".rsvp-note");
+
+  note.innerHTML = "❤️ Thank you! Your RSVP has been received.";
+  note.style.color = "#b03a3a";
+  note.style.fontWeight = "600";
+  note.style.fontSize = "16px";
+
+  note.style.opacity = "0";
+  note.style.transform = "translateY(10px)";
+
+  setTimeout(() => {
+    note.style.transition = "all 0.4s ease";
+    note.style.opacity = "1";
+    note.style.transform = "translateY(0)";
+  }, 50);
+
+  document.getElementById("rsvp-form").reset();
       })
       .catch(function (error) {
         alert("❌ Failed to send RSVP");
