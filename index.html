@@ -1003,6 +1003,14 @@
       .falling-petals{display:none;}
       .gallery-grid{gap:10px;}
     }
+
+    .gallery-item.wide {
+  grid-column: span 2;
+}
+
+.gallery-item.tall {
+  grid-row: span 2;
+}
   </style>
 </head>
 <body>
@@ -1814,7 +1822,7 @@
             <p>We invite you to witness our sacred union at one of Vienna&rsquo;s most beautiful churches.</p>
             <ul class="detail-list">
               <li><span class="li-icon">📍</span> St. Peterskirche, Peterspl. 1010 Vienna</li>
-              <li><span class="li-icon">🕐</span> Please arrive by 17:10 Uhr</li>
+              
               <li><span class="li-icon">👔</span> Formal / Semi-Formal Attire</li>
             </ul>
           </div>
@@ -1907,7 +1915,7 @@
           <div class="plan-content">
             <div class="plan-icon">🕒</div>
             <h3>Church Time Reminder</h3>
-            <p>Perfect place to repeat: church starts at 17:30 Uhr, please arrive by 17:10 Uhr.</p>
+            <p>Perfect place to repeat: church starts at 17:30 Uhr</p>
           </div>
         </article>
       </div>
@@ -1996,9 +2004,17 @@
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="images/20258913.JPG" alt="Couple photo" loading="lazy">
         </div>
+<div class="gallery-item tall" onclick="openLightbox(this.querySelector('img').src)">
+  <img src="images/20258808.JPG" alt="Couple photo" loading="lazy">
+</div>
+<div class="gallery-item wide" onclick="openLightbox(this.querySelector('img').src)">
+  <img src="images/20258778.JPG" alt="Couple photo" loading="lazy">
+</div>
       </div>
     </div>
   </section>
+
+  
 
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close" aria-label="Close">&times;</button>
