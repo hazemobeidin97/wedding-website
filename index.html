@@ -1923,6 +1923,66 @@
   </section>
   
   <section class="rsvp-section" id="rsvp">
+  <div class="container">
+    <div class="section-title">
+      <div class="sub">Will You Be There?</div>
+      <h2>RSVP</h2>
+    </div>
+
+    <div class="rsvp-card">
+      <div class="rsvp-header">
+        <div class="rsvp-icon">💌</div>
+        <h3>We’d Love to Have You</h3>
+        <p>Please let us know if you can celebrate with us — it means the world to us!</p>
+      </div>
+
+      <form class="rsvp-form" id="rsvp-form">
+
+        <div class="rsvp-row">
+          <div class="rsvp-field">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Full name" required />
+          </div>
+          <div class="rsvp-field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+
+        <div class="rsvp-row">
+          <div class="rsvp-field">
+            <label>Will you attend?</label>
+            <select name="attending" required>
+              <option value="">Please select…</option>
+              <option value="yes">Joyfully accepts! 🎉</option>
+              <option value="no">Regretfully declines 😢</option>
+            </select>
+          </div>
+          <div class="rsvp-field">
+            <label>Number of Guests</label>
+            <input type="number" name="guests" min="1" max="10" value="1" />
+          </div>
+        </div>
+
+        <div class="rsvp-row">
+          <div class="rsvp-field full">
+            <label>Message</label>
+            <textarea name="message" placeholder="Optional message..."></textarea>
+          </div>
+        </div>
+
+        <div class="rsvp-submit-wrap">
+          <button type="submit" class="rsvp-btn">Send RSVP ❤️</button>
+        </div>
+
+        <p class="rsvp-note">We kindly ask you to respond by <strong>1 July 2026</strong>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <!--
+  <section class="rsvp-section" id="rsvp">
     <div class="container">
       <div class="section-title">
         <div class="sub">Will You Be There?</div>
@@ -1979,7 +2039,7 @@
       </div>
     </div>
   </section>
-
+-->
   <!-- Gallery -->
   <section class="section" id="gallery">
     <div class="container">
@@ -2014,6 +2074,29 @@
     </div>
   </section>
 
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("xTaRlTtvUjJSW8WFL");
+  })();
+
+  document.getElementById("rsvp-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_weddingSR", "template_ws1re7d", this)
+      .then(function () {
+        document.querySelector(".rsvp-note").innerHTML = "✅ RSVP sent! Thank you 💌";
+        document.getElementById("rsvp-form").reset();
+      })
+      .catch(function (error) {
+        alert("❌ Failed to send RSVP");
+        console.log(error);
+      });
+  });
+</script>
   
 
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
